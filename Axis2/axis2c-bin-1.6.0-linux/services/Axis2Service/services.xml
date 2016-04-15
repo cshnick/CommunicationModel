@@ -1,0 +1,7 @@
+<service name="Axis2Service">
+ <parameter name="ServiceClass" locked="xsd:false">Axis2Service</parameter>
+ <description>
+  Axis2Service sample.
+ </description>
+ <operation name="json"/>
+</service>

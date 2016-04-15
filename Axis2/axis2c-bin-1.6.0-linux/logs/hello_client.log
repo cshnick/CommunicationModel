@@ -1,0 +1,1129 @@
+[Sun Apr  3 13:13:49 2016] [...TRACE...] conf_init.c(154) Entry:axis2_build_client_conf_ctx
+[Sun Apr  3 13:13:49 2016] [debug] phase.c(121) axis2_handler_t *request_uri_based_dispatcher added to the index 0 of the phase Transport
+[Sun Apr  3 13:13:49 2016] [debug] phase.c(121) axis2_handler_t *addressing_based_dispatcher added to the index 1 of the phase Transport
+[Sun Apr  3 13:13:49 2016] [...TRACE...] conf_builder.c(155) Entry:axis2_conf_builder_populate_conf
+[Sun Apr  3 13:13:49 2016] [debug] phase.c(121) axis2_handler_t *rest_dispatcher added to the index 0 of the phase Dispatch
+[Sun Apr  3 13:13:49 2016] [debug] phase.c(121) axis2_handler_t *soap_message_body_based_dispatcher added to the index 1 of the phase Dispatch
+[Sun Apr  3 13:13:49 2016] [debug] phase.c(121) axis2_handler_t *soap_action_based_dispatcher added to the index 2 of the phase Dispatch
+[Sun Apr  3 13:13:49 2016] [debug] phase.c(121) axis2_handler_t *dispatch_post_conditions_evaluator added to the index 0 of the phase PostDispatch
+[Sun Apr  3 13:13:49 2016] [debug] phase.c(121) axis2_handler_t *context_handler added to the index 1 of the phase PostDispatch
+[Sun Apr  3 13:13:49 2016] [debug] conf_builder.c(234) No custom dispatching order found. Continue with the default dispatching order
+[Sun Apr  3 13:13:49 2016] [...TRACE...] conf_builder.c(345) Entry:axis2_conf_builder_process_module_refs
+[Sun Apr  3 13:13:49 2016] [debug] conf_builder.c(379) Module addressing found in axis2.xml
+[Sun Apr  3 13:13:49 2016] [...TRACE...] conf_builder.c(392) Exit:axis2_conf_builder_process_module_refs
+[Sun Apr  3 13:13:49 2016] [...TRACE...] conf_builder.c(692) Entry:axis2_conf_builder_process_transport_senders
+[Sun Apr  3 13:13:49 2016] [debug] class_loader.c(140) /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/lib/libaxis2_http_sender.so shared lib loaded successfully
+[Sun Apr  3 13:13:49 2016] [...TRACE...] conf_builder.c(1054) Exit:axis2_conf_builder_process_transport_senders
+[Sun Apr  3 13:13:49 2016] [...TRACE...] conf_builder.c(1069) Entry:axis2_conf_builder_process_transport_recvs
+[Sun Apr  3 13:13:49 2016] [debug] class_loader.c(140) /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/lib/libaxis2_http_receiver.so shared lib loaded successfully
+[Sun Apr  3 13:13:49 2016] [...TRACE...] conf_builder.c(1419) Exit:axis2_conf_builder_process_transport_recvs
+[Sun Apr  3 13:13:49 2016] [...TRACE...] conf_builder.c(533) Entry:axis2_conf_builder_process_phase_orders
+[Sun Apr  3 13:13:49 2016] [...TRACE...] conf_builder.c(617) Entry:axis2_conf_builder_get_phase_list
+[Sun Apr  3 13:13:49 2016] [...TRACE...] conf_builder.c(680) Exit:axis2_conf_builder_get_phase_list
+[Sun Apr  3 13:13:49 2016] [...TRACE...] conf_builder.c(617) Entry:axis2_conf_builder_get_phase_list
+[Sun Apr  3 13:13:49 2016] [...TRACE...] conf_builder.c(680) Exit:axis2_conf_builder_get_phase_list
+[Sun Apr  3 13:13:49 2016] [...TRACE...] conf_builder.c(617) Entry:axis2_conf_builder_get_phase_list
+[Sun Apr  3 13:13:49 2016] [...TRACE...] conf_builder.c(680) Exit:axis2_conf_builder_get_phase_list
+[Sun Apr  3 13:13:49 2016] [...TRACE...] conf_builder.c(617) Entry:axis2_conf_builder_get_phase_list
+[Sun Apr  3 13:13:49 2016] [...TRACE...] conf_builder.c(680) Exit:axis2_conf_builder_get_phase_list
+[Sun Apr  3 13:13:49 2016] [...TRACE...] conf_builder.c(598) Exit:axis2_conf_builder_process_phase_orders
+[Sun Apr  3 13:13:49 2016] [...TRACE...] conf_builder.c(333) Exit:axis2_conf_builder_populate_conf
+[Sun Apr  3 13:13:49 2016] [...TRACE...] module_builder.c(139) Entry:axis2_module_builder_populate_module
+[Sun Apr  3 13:13:49 2016] [...TRACE...] module_builder.c(367) Exit:axis2_module_builder_populate_module
+[Sun Apr  3 13:13:49 2016] [debug] dep_engine.c(1283) axis2_dep_engine_load_module_dll: DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/modules/addressing/libaxis2_mod_addr.so
+[Sun Apr  3 13:13:49 2016] [debug] class_loader.c(140) /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/modules/addressing/libaxis2_mod_addr.so shared lib loaded successfully
+[Sun Apr  3 13:13:49 2016] [...TRACE...] module_builder.c(139) Entry:axis2_module_builder_populate_module
+[Sun Apr  3 13:13:49 2016] [...TRACE...] module_builder.c(367) Exit:axis2_module_builder_populate_module
+[Sun Apr  3 13:13:49 2016] [debug] dep_engine.c(1283) axis2_dep_engine_load_module_dll: DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/modules/logging/libaxis2_mod_log.so
+[Sun Apr  3 13:13:49 2016] [debug] class_loader.c(140) /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/modules/logging/libaxis2_mod_log.so shared lib loaded successfully
+[Sun Apr  3 13:13:49 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/Calculator/libCalculator.so
+[Sun Apr  3 13:13:49 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/echo/libecho.so
+[Sun Apr  3 13:13:49 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/hello/libhello.so
+[Sun Apr  3 13:13:49 2016] [debug] om_element.c(1114) There are no child elements for the node
+[Sun Apr  3 13:13:49 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/math/libmath.so
+[Sun Apr  3 13:13:49 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/mtom/libmtom.so
+[Sun Apr  3 13:13:49 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/mtom_callback/libmtom_callback.so
+[Sun Apr  3 13:13:49 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/notify/libnotify.so
+[Sun Apr  3 13:13:49 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/sg_math/libadd.so
+[Sun Apr  3 13:13:49 2016] [debug] om_element.c(1114) There are no child elements for the node
+[Sun Apr  3 13:13:49 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/sg_math/libsub.so
+[Sun Apr  3 13:13:49 2016] [debug] om_element.c(1114) There are no child elements for the node
+[Sun Apr  3 13:13:49 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/sg_math/libmul.so
+[Sun Apr  3 13:13:49 2016] [debug] om_element.c(1114) There are no child elements for the node
+[Sun Apr  3 13:13:49 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/sg_math/libdiv.so
+[Sun Apr  3 13:13:49 2016] [debug] om_element.c(1114) There are no child elements for the node
+[Sun Apr  3 13:13:49 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/version/libversion.so
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(184) Entry:axis2_phase_resolver_engage_module_globally
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(927) Entry:axis2_phase_resolver_add_module_handlers_to_system_defined_phases
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingInHandler to phase Transport
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(1068) Exit:axis2_phase_resolver_add_module_handlers_to_system_defined_phases
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(222) svc name is:div
+[Sun Apr  3 13:13:49 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(139) Service name is : div
+[Sun Apr  3 13:13:49 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(1123) Operation name is : div
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(222) svc name is:hello
+[Sun Apr  3 13:13:49 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(139) Service name is : hello
+[Sun Apr  3 13:13:49 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(1123) Operation name is : greet
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(222) svc name is:version
+[Sun Apr  3 13:13:49 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(139) Service name is : version
+[Sun Apr  3 13:13:49 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(1123) Operation name is : GetVersion
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(222) svc name is:mtom_callback
+[Sun Apr  3 13:13:49 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(139) Service name is : mtom_callback
+[Sun Apr  3 13:13:49 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(1123) Operation name is : mtomSample
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(222) svc name is:notify
+[Sun Apr  3 13:13:49 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(139) Service name is : notify
+[Sun Apr  3 13:13:49 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(1123) Operation name is : notify
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(222) svc name is:add
+[Sun Apr  3 13:13:49 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(139) Service name is : add
+[Sun Apr  3 13:13:49 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(1123) Operation name is : add
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(222) svc name is:Calculator
+[Sun Apr  3 13:13:49 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(139) Service name is : Calculator
+[Sun Apr  3 13:13:49 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(1123) Operation name is : div
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(1123) Operation name is : add
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(1123) Operation name is : sub
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(1123) Operation name is : mul
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(222) svc name is:math
+[Sun Apr  3 13:13:49 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(139) Service name is : math
+[Sun Apr  3 13:13:49 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(1123) Operation name is : div
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(1123) Operation name is : add
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(1123) Operation name is : sub
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(1123) Operation name is : mul
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(222) svc name is:sub
+[Sun Apr  3 13:13:49 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(139) Service name is : sub
+[Sun Apr  3 13:13:49 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(1123) Operation name is : sub
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(222) svc name is:mtom
+[Sun Apr  3 13:13:49 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(139) Service name is : mtom
+[Sun Apr  3 13:13:49 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(1123) Operation name is : mtomSample
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(222) svc name is:mul
+[Sun Apr  3 13:13:49 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(139) Service name is : mul
+[Sun Apr  3 13:13:49 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(1123) Operation name is : mul
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(222) svc name is:echo
+[Sun Apr  3 13:13:49 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(139) Service name is : echo
+[Sun Apr  3 13:13:49 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(1123) Operation name is : echoString
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(339) Exit:axis2_phase_resolver_engage_module_globally
+[Sun Apr  3 13:13:49 2016] [...TRACE...] conf_init.c(229) Entry:axis2_init_modules
+[Sun Apr  3 13:13:49 2016] [...TRACE...] conf_init.c(268) Exit:axis2_init_modules
+[Sun Apr  3 13:13:49 2016] [...TRACE...] conf_init.c(365) Entry:axis2_init_transports
+[Sun Apr  3 13:13:49 2016] [...TRACE...] conf_init.c(416) Exit:axis2_init_transports
+[Sun Apr  3 13:13:49 2016] [...TRACE...] conf_init.c(217) Exit:axis2_build_client_conf_ctx
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(139) Service name is : __ANONYMOUS_SERVICE__
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(2058) Trying to add this handler AddressingInHandler to system pre defined phases , but those handlers are already added to global chain which run irrespective of the service
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(873) Exit:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(873) Exit:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(2058) Trying to add this handler AddressingInHandler to system pre defined phases , but those handlers are already added to global chain which run irrespective of the service
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(873) Exit:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(873) Exit:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(2058) Trying to add this handler AddressingInHandler to system pre defined phases , but those handlers are already added to global chain which run irrespective of the service
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(873) Exit:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:13:49 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:13:49 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase_resolver.c(873) Exit:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:13:49 2016] [debug] op_client.c(888) Start:axis2_op_client_infer_transport
+[Sun Apr  3 13:13:49 2016] [debug] op_client.c(954) End:axis2_op_client_infer_transport
+[Sun Apr  3 13:13:49 2016] [...TRACE...] engine.c(91) axis2_engine_send start
+[Sun Apr  3 13:13:49 2016] [...TRACE...] engine.c(680) Start:axis2_engine_invoke_phases
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase.c(166) Entry:axis2_phase_invoke
+[Sun Apr  3 13:13:49 2016] [debug] phase.c(210) Invoke the handler AddressingOutHandler within the phase MessageOut
+[Sun Apr  3 13:13:49 2016] [info]  Starting addressing out handler
+[Sun Apr  3 13:13:49 2016] [debug] addr_out_handler.c(133) No action present. Stop processing addressing
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase.c(273) Exit:axis2_phase_invoke
+[Sun Apr  3 13:13:49 2016] [...TRACE...] engine.c(701) End:axis2_engine_invoke_phases
+[Sun Apr  3 13:13:49 2016] [...TRACE...] http_transport_sender.c(194) Entry:axis2_http_transport_sender_invoke
+[Sun Apr  3 13:13:49 2016] [debug] http_transport_sender.c(246) ctx_epr:http://localhost:9090/axis2/services/hello
+[Sun Apr  3 13:13:49 2016] [debug] http_transport_sender.c(805) using axis2 native http sender.
+[Sun Apr  3 13:13:49 2016] [...TRACE...] http_sender.c(252) Entry:axis2_http_sender_send
+[Sun Apr  3 13:13:49 2016] [debug] http_sender.c(416) msg_ctx_id:urn:uuid:c23676bc-f984-1e51-3522-207c8f01162d
+[Sun Apr  3 13:13:49 2016] [...TRACE...] http_sender.c(1593) Entry:axis2_http_sender_process_response
+[Sun Apr  3 13:13:49 2016] [...TRACE...] http_sender.c(1614) Exit:axis2_http_sender_process_response
+[Sun Apr  3 13:13:49 2016] [debug] http_transport_sender.c(822) OP name axutil_qname_get_localpart = http://www.w3.org/2004/08/wsdl/out-in
+[Sun Apr  3 13:13:49 2016] [debug] soap_builder.c(945) identified soap version is soap12
+[Sun Apr  3 13:13:49 2016] [...TRACE...] http_transport_sender.c(596) Exit:axis2_http_transport_sender_invoke
+[Sun Apr  3 13:13:49 2016] [...TRACE...] engine.c(192) axis2_engine_send end successfully
+[Sun Apr  3 13:13:49 2016] [...TRACE...] engine.c(211) Start:axis2_engine_receive
+[Sun Apr  3 13:13:49 2016] [...TRACE...] engine.c(680) Start:axis2_engine_invoke_phases
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase.c(166) Entry:axis2_phase_invoke
+[Sun Apr  3 13:13:49 2016] [debug] phase.c(210) Invoke the handler request_uri_based_dispatcher within the phase Transport
+[Sun Apr  3 13:13:49 2016] [debug] phase.c(210) Invoke the handler AddressingInHandler within the phase Transport
+[Sun Apr  3 13:13:49 2016] [info]  Starting addressing in handler
+[Sun Apr  3 13:13:49 2016] [debug] phase.c(210) Invoke the handler addressing_based_dispatcher within the phase Transport
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase.c(273) Exit:axis2_phase_invoke
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase.c(166) Entry:axis2_phase_invoke
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase.c(273) Exit:axis2_phase_invoke
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase.c(166) Entry:axis2_phase_invoke
+[Sun Apr  3 13:13:49 2016] [debug] phase.c(210) Invoke the handler rest_dispatcher within the phase Dispatch
+[Sun Apr  3 13:13:49 2016] [debug] phase.c(210) Invoke the handler soap_message_body_based_dispatcher within the phase Dispatch
+[Sun Apr  3 13:13:49 2016] [debug] phase.c(210) Invoke the handler soap_action_based_dispatcher within the phase Dispatch
+[Sun Apr  3 13:13:49 2016] [debug] soap_action_disp.c(89) Checking for service using SOAPAction is not implemented
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase.c(273) Exit:axis2_phase_invoke
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase.c(166) Entry:axis2_phase_invoke
+[Sun Apr  3 13:13:49 2016] [debug] phase.c(210) Invoke the handler dispatch_post_conditions_evaluator within the phase PostDispatch
+[Sun Apr  3 13:13:49 2016] [debug] phase.c(210) Invoke the handler context_handler within the phase PostDispatch
+[Sun Apr  3 13:13:49 2016] [...TRACE...] ctx_handler.c(102) Entry:axis2_ctx_handler_invoke
+[Sun Apr  3 13:13:49 2016] [...TRACE...] phase.c(273) Exit:axis2_phase_invoke
+[Sun Apr  3 13:13:49 2016] [...TRACE...] engine.c(701) End:axis2_engine_invoke_phases
+[Sun Apr  3 13:13:49 2016] [...TRACE...] engine.c(680) Start:axis2_engine_invoke_phases
+[Sun Apr  3 13:13:49 2016] [...TRACE...] engine.c(701) End:axis2_engine_invoke_phases
+[Sun Apr  3 13:13:49 2016] [...TRACE...] engine.c(323) Exit:axis2_engine_receive
+[Sun Apr  3 13:13:49 2016] [debug] arch_file_data.c(149) Service name :Calculator
+[Sun Apr  3 13:13:49 2016] [debug] arch_file_data.c(149) Service name :echo
+[Sun Apr  3 13:13:49 2016] [debug] arch_file_data.c(149) Service name :hello
+[Sun Apr  3 13:13:49 2016] [debug] arch_file_data.c(149) Service name :math
+[Sun Apr  3 13:13:49 2016] [debug] arch_file_data.c(149) Service name :mtom
+[Sun Apr  3 13:13:49 2016] [debug] arch_file_data.c(149) Service name :mtom_callback
+[Sun Apr  3 13:13:49 2016] [debug] arch_file_data.c(149) Service name :notify
+[Sun Apr  3 13:13:49 2016] [debug] arch_file_data.c(149) Service name :div
+[Sun Apr  3 13:13:49 2016] [debug] arch_file_data.c(149) Service name :add
+[Sun Apr  3 13:13:49 2016] [debug] arch_file_data.c(149) Service name :sub
+[Sun Apr  3 13:13:49 2016] [debug] arch_file_data.c(149) Service name :mul
+[Sun Apr  3 13:13:49 2016] [debug] arch_file_data.c(149) Service name :version
+[Sun Apr  3 13:17:34 2016] [...TRACE...] conf_init.c(154) Entry:axis2_build_client_conf_ctx
+[Sun Apr  3 13:17:34 2016] [debug] phase.c(121) axis2_handler_t *request_uri_based_dispatcher added to the index 0 of the phase Transport
+[Sun Apr  3 13:17:34 2016] [debug] phase.c(121) axis2_handler_t *addressing_based_dispatcher added to the index 1 of the phase Transport
+[Sun Apr  3 13:17:34 2016] [...TRACE...] conf_builder.c(155) Entry:axis2_conf_builder_populate_conf
+[Sun Apr  3 13:17:34 2016] [debug] phase.c(121) axis2_handler_t *rest_dispatcher added to the index 0 of the phase Dispatch
+[Sun Apr  3 13:17:34 2016] [debug] phase.c(121) axis2_handler_t *soap_message_body_based_dispatcher added to the index 1 of the phase Dispatch
+[Sun Apr  3 13:17:34 2016] [debug] phase.c(121) axis2_handler_t *soap_action_based_dispatcher added to the index 2 of the phase Dispatch
+[Sun Apr  3 13:17:34 2016] [debug] phase.c(121) axis2_handler_t *dispatch_post_conditions_evaluator added to the index 0 of the phase PostDispatch
+[Sun Apr  3 13:17:34 2016] [debug] phase.c(121) axis2_handler_t *context_handler added to the index 1 of the phase PostDispatch
+[Sun Apr  3 13:17:34 2016] [debug] conf_builder.c(234) No custom dispatching order found. Continue with the default dispatching order
+[Sun Apr  3 13:17:34 2016] [...TRACE...] conf_builder.c(345) Entry:axis2_conf_builder_process_module_refs
+[Sun Apr  3 13:17:34 2016] [debug] conf_builder.c(379) Module addressing found in axis2.xml
+[Sun Apr  3 13:17:34 2016] [...TRACE...] conf_builder.c(392) Exit:axis2_conf_builder_process_module_refs
+[Sun Apr  3 13:17:34 2016] [...TRACE...] conf_builder.c(692) Entry:axis2_conf_builder_process_transport_senders
+[Sun Apr  3 13:17:34 2016] [debug] class_loader.c(140) /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/lib/libaxis2_http_sender.so shared lib loaded successfully
+[Sun Apr  3 13:17:34 2016] [...TRACE...] conf_builder.c(1054) Exit:axis2_conf_builder_process_transport_senders
+[Sun Apr  3 13:17:34 2016] [...TRACE...] conf_builder.c(1069) Entry:axis2_conf_builder_process_transport_recvs
+[Sun Apr  3 13:17:34 2016] [debug] class_loader.c(140) /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/lib/libaxis2_http_receiver.so shared lib loaded successfully
+[Sun Apr  3 13:17:34 2016] [...TRACE...] conf_builder.c(1419) Exit:axis2_conf_builder_process_transport_recvs
+[Sun Apr  3 13:17:34 2016] [...TRACE...] conf_builder.c(533) Entry:axis2_conf_builder_process_phase_orders
+[Sun Apr  3 13:17:34 2016] [...TRACE...] conf_builder.c(617) Entry:axis2_conf_builder_get_phase_list
+[Sun Apr  3 13:17:34 2016] [...TRACE...] conf_builder.c(680) Exit:axis2_conf_builder_get_phase_list
+[Sun Apr  3 13:17:34 2016] [...TRACE...] conf_builder.c(617) Entry:axis2_conf_builder_get_phase_list
+[Sun Apr  3 13:17:34 2016] [...TRACE...] conf_builder.c(680) Exit:axis2_conf_builder_get_phase_list
+[Sun Apr  3 13:17:34 2016] [...TRACE...] conf_builder.c(617) Entry:axis2_conf_builder_get_phase_list
+[Sun Apr  3 13:17:34 2016] [...TRACE...] conf_builder.c(680) Exit:axis2_conf_builder_get_phase_list
+[Sun Apr  3 13:17:34 2016] [...TRACE...] conf_builder.c(617) Entry:axis2_conf_builder_get_phase_list
+[Sun Apr  3 13:17:34 2016] [...TRACE...] conf_builder.c(680) Exit:axis2_conf_builder_get_phase_list
+[Sun Apr  3 13:17:34 2016] [...TRACE...] conf_builder.c(598) Exit:axis2_conf_builder_process_phase_orders
+[Sun Apr  3 13:17:34 2016] [...TRACE...] conf_builder.c(333) Exit:axis2_conf_builder_populate_conf
+[Sun Apr  3 13:17:34 2016] [...TRACE...] module_builder.c(139) Entry:axis2_module_builder_populate_module
+[Sun Apr  3 13:17:34 2016] [...TRACE...] module_builder.c(367) Exit:axis2_module_builder_populate_module
+[Sun Apr  3 13:17:34 2016] [debug] dep_engine.c(1283) axis2_dep_engine_load_module_dll: DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/modules/addressing/libaxis2_mod_addr.so
+[Sun Apr  3 13:17:34 2016] [debug] class_loader.c(140) /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/modules/addressing/libaxis2_mod_addr.so shared lib loaded successfully
+[Sun Apr  3 13:17:34 2016] [...TRACE...] module_builder.c(139) Entry:axis2_module_builder_populate_module
+[Sun Apr  3 13:17:34 2016] [...TRACE...] module_builder.c(367) Exit:axis2_module_builder_populate_module
+[Sun Apr  3 13:17:34 2016] [debug] dep_engine.c(1283) axis2_dep_engine_load_module_dll: DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/modules/logging/libaxis2_mod_log.so
+[Sun Apr  3 13:17:34 2016] [debug] class_loader.c(140) /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/modules/logging/libaxis2_mod_log.so shared lib loaded successfully
+[Sun Apr  3 13:17:34 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/Axis2Service/libAxis2Service.so
+[Sun Apr  3 13:17:34 2016] [debug] om_element.c(1114) There are no child elements for the node
+[Sun Apr  3 13:17:34 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/Calculator/libCalculator.so
+[Sun Apr  3 13:17:34 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/echo/libecho.so
+[Sun Apr  3 13:17:34 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/math/libmath.so
+[Sun Apr  3 13:17:34 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/mtom/libmtom.so
+[Sun Apr  3 13:17:34 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/mtom_callback/libmtom_callback.so
+[Sun Apr  3 13:17:34 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/notify/libnotify.so
+[Sun Apr  3 13:17:34 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/sg_math/libadd.so
+[Sun Apr  3 13:17:34 2016] [debug] om_element.c(1114) There are no child elements for the node
+[Sun Apr  3 13:17:34 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/sg_math/libsub.so
+[Sun Apr  3 13:17:34 2016] [debug] om_element.c(1114) There are no child elements for the node
+[Sun Apr  3 13:17:34 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/sg_math/libmul.so
+[Sun Apr  3 13:17:34 2016] [debug] om_element.c(1114) There are no child elements for the node
+[Sun Apr  3 13:17:34 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/sg_math/libdiv.so
+[Sun Apr  3 13:17:34 2016] [debug] om_element.c(1114) There are no child elements for the node
+[Sun Apr  3 13:17:34 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/version/libversion.so
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(184) Entry:axis2_phase_resolver_engage_module_globally
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(927) Entry:axis2_phase_resolver_add_module_handlers_to_system_defined_phases
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingInHandler to phase Transport
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(1068) Exit:axis2_phase_resolver_add_module_handlers_to_system_defined_phases
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(222) svc name is:div
+[Sun Apr  3 13:17:34 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(139) Service name is : div
+[Sun Apr  3 13:17:34 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(1123) Operation name is : div
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(222) svc name is:version
+[Sun Apr  3 13:17:34 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(139) Service name is : version
+[Sun Apr  3 13:17:34 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(1123) Operation name is : GetVersion
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(222) svc name is:Axis2Service
+[Sun Apr  3 13:17:34 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(139) Service name is : Axis2Service
+[Sun Apr  3 13:17:34 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(1123) Operation name is : greet
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(222) svc name is:mtom_callback
+[Sun Apr  3 13:17:34 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(139) Service name is : mtom_callback
+[Sun Apr  3 13:17:34 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(1123) Operation name is : mtomSample
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(222) svc name is:notify
+[Sun Apr  3 13:17:34 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(139) Service name is : notify
+[Sun Apr  3 13:17:34 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(1123) Operation name is : notify
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(222) svc name is:add
+[Sun Apr  3 13:17:34 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(139) Service name is : add
+[Sun Apr  3 13:17:34 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(1123) Operation name is : add
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(222) svc name is:Calculator
+[Sun Apr  3 13:17:34 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(139) Service name is : Calculator
+[Sun Apr  3 13:17:34 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(1123) Operation name is : div
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(1123) Operation name is : add
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(1123) Operation name is : sub
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(1123) Operation name is : mul
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(222) svc name is:math
+[Sun Apr  3 13:17:34 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(139) Service name is : math
+[Sun Apr  3 13:17:34 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(1123) Operation name is : div
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(1123) Operation name is : add
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(1123) Operation name is : sub
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(1123) Operation name is : mul
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(222) svc name is:sub
+[Sun Apr  3 13:17:34 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(139) Service name is : sub
+[Sun Apr  3 13:17:34 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(1123) Operation name is : sub
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(222) svc name is:mtom
+[Sun Apr  3 13:17:34 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(139) Service name is : mtom
+[Sun Apr  3 13:17:34 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(1123) Operation name is : mtomSample
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(222) svc name is:mul
+[Sun Apr  3 13:17:34 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(139) Service name is : mul
+[Sun Apr  3 13:17:34 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(1123) Operation name is : mul
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(222) svc name is:echo
+[Sun Apr  3 13:17:34 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(139) Service name is : echo
+[Sun Apr  3 13:17:34 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(1123) Operation name is : echoString
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(339) Exit:axis2_phase_resolver_engage_module_globally
+[Sun Apr  3 13:17:34 2016] [...TRACE...] conf_init.c(229) Entry:axis2_init_modules
+[Sun Apr  3 13:17:34 2016] [...TRACE...] conf_init.c(268) Exit:axis2_init_modules
+[Sun Apr  3 13:17:34 2016] [...TRACE...] conf_init.c(365) Entry:axis2_init_transports
+[Sun Apr  3 13:17:34 2016] [...TRACE...] conf_init.c(416) Exit:axis2_init_transports
+[Sun Apr  3 13:17:34 2016] [...TRACE...] conf_init.c(217) Exit:axis2_build_client_conf_ctx
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(139) Service name is : __ANONYMOUS_SERVICE__
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(2058) Trying to add this handler AddressingInHandler to system pre defined phases , but those handlers are already added to global chain which run irrespective of the service
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(873) Exit:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(873) Exit:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(2058) Trying to add this handler AddressingInHandler to system pre defined phases , but those handlers are already added to global chain which run irrespective of the service
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(873) Exit:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(873) Exit:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(2058) Trying to add this handler AddressingInHandler to system pre defined phases , but those handlers are already added to global chain which run irrespective of the service
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(873) Exit:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:34 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:34 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase_resolver.c(873) Exit:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:34 2016] [debug] op_client.c(888) Start:axis2_op_client_infer_transport
+[Sun Apr  3 13:17:34 2016] [debug] op_client.c(954) End:axis2_op_client_infer_transport
+[Sun Apr  3 13:17:34 2016] [...TRACE...] engine.c(91) axis2_engine_send start
+[Sun Apr  3 13:17:34 2016] [...TRACE...] engine.c(680) Start:axis2_engine_invoke_phases
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase.c(166) Entry:axis2_phase_invoke
+[Sun Apr  3 13:17:34 2016] [debug] phase.c(210) Invoke the handler AddressingOutHandler within the phase MessageOut
+[Sun Apr  3 13:17:34 2016] [info]  Starting addressing out handler
+[Sun Apr  3 13:17:34 2016] [debug] addr_out_handler.c(133) No action present. Stop processing addressing
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase.c(273) Exit:axis2_phase_invoke
+[Sun Apr  3 13:17:34 2016] [...TRACE...] engine.c(701) End:axis2_engine_invoke_phases
+[Sun Apr  3 13:17:34 2016] [...TRACE...] http_transport_sender.c(194) Entry:axis2_http_transport_sender_invoke
+[Sun Apr  3 13:17:34 2016] [debug] http_transport_sender.c(246) ctx_epr:http://localhost:9090/axis2/services/hello
+[Sun Apr  3 13:17:34 2016] [debug] http_transport_sender.c(805) using axis2 native http sender.
+[Sun Apr  3 13:17:34 2016] [...TRACE...] http_sender.c(252) Entry:axis2_http_sender_send
+[Sun Apr  3 13:17:34 2016] [debug] http_sender.c(416) msg_ctx_id:urn:uuid:488e974e-f985-1e51-2a9a-207c8f01162d
+[Sun Apr  3 13:17:34 2016] [error] http_sender.c(1411) Error occurred in transport
+[Sun Apr  3 13:17:34 2016] [...TRACE...] http_sender.c(1593) Entry:axis2_http_sender_process_response
+[Sun Apr  3 13:17:34 2016] [...TRACE...] http_sender.c(1614) Exit:axis2_http_sender_process_response
+[Sun Apr  3 13:17:34 2016] [debug] http_transport_sender.c(822) OP name axutil_qname_get_localpart = http://www.w3.org/2004/08/wsdl/out-in
+[Sun Apr  3 13:17:34 2016] [debug] soap_builder.c(945) identified soap version is soap12
+[Sun Apr  3 13:17:34 2016] [...TRACE...] http_transport_sender.c(596) Exit:axis2_http_transport_sender_invoke
+[Sun Apr  3 13:17:34 2016] [...TRACE...] engine.c(192) axis2_engine_send end successfully
+[Sun Apr  3 13:17:34 2016] [...TRACE...] engine.c(211) Start:axis2_engine_receive
+[Sun Apr  3 13:17:34 2016] [...TRACE...] engine.c(680) Start:axis2_engine_invoke_phases
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase.c(166) Entry:axis2_phase_invoke
+[Sun Apr  3 13:17:34 2016] [debug] phase.c(210) Invoke the handler request_uri_based_dispatcher within the phase Transport
+[Sun Apr  3 13:17:34 2016] [debug] phase.c(210) Invoke the handler AddressingInHandler within the phase Transport
+[Sun Apr  3 13:17:34 2016] [info]  Starting addressing in handler
+[Sun Apr  3 13:17:34 2016] [debug] phase.c(210) Invoke the handler addressing_based_dispatcher within the phase Transport
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase.c(273) Exit:axis2_phase_invoke
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase.c(166) Entry:axis2_phase_invoke
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase.c(273) Exit:axis2_phase_invoke
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase.c(166) Entry:axis2_phase_invoke
+[Sun Apr  3 13:17:34 2016] [debug] phase.c(210) Invoke the handler rest_dispatcher within the phase Dispatch
+[Sun Apr  3 13:17:34 2016] [debug] phase.c(210) Invoke the handler soap_message_body_based_dispatcher within the phase Dispatch
+[Sun Apr  3 13:17:34 2016] [debug] soap_body_disp.c(127) Checking for service using SOAP message body's first child's namespace URI : http://www.w3.org/2003/05/soap-envelope
+[Sun Apr  3 13:17:34 2016] [debug] phase.c(210) Invoke the handler soap_action_based_dispatcher within the phase Dispatch
+[Sun Apr  3 13:17:34 2016] [debug] soap_action_disp.c(89) Checking for service using SOAPAction is not implemented
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase.c(273) Exit:axis2_phase_invoke
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase.c(166) Entry:axis2_phase_invoke
+[Sun Apr  3 13:17:34 2016] [debug] phase.c(210) Invoke the handler dispatch_post_conditions_evaluator within the phase PostDispatch
+[Sun Apr  3 13:17:34 2016] [debug] phase.c(210) Invoke the handler context_handler within the phase PostDispatch
+[Sun Apr  3 13:17:34 2016] [...TRACE...] ctx_handler.c(102) Entry:axis2_ctx_handler_invoke
+[Sun Apr  3 13:17:34 2016] [...TRACE...] phase.c(273) Exit:axis2_phase_invoke
+[Sun Apr  3 13:17:34 2016] [...TRACE...] engine.c(701) End:axis2_engine_invoke_phases
+[Sun Apr  3 13:17:34 2016] [...TRACE...] engine.c(680) Start:axis2_engine_invoke_phases
+[Sun Apr  3 13:17:34 2016] [...TRACE...] engine.c(701) End:axis2_engine_invoke_phases
+[Sun Apr  3 13:17:34 2016] [...TRACE...] engine.c(323) Exit:axis2_engine_receive
+[Sun Apr  3 13:17:34 2016] [debug] arch_file_data.c(149) Service name :Axis2Service
+[Sun Apr  3 13:17:34 2016] [debug] arch_file_data.c(149) Service name :Calculator
+[Sun Apr  3 13:17:34 2016] [debug] arch_file_data.c(149) Service name :echo
+[Sun Apr  3 13:17:34 2016] [debug] arch_file_data.c(149) Service name :math
+[Sun Apr  3 13:17:34 2016] [debug] arch_file_data.c(149) Service name :mtom
+[Sun Apr  3 13:17:34 2016] [debug] arch_file_data.c(149) Service name :mtom_callback
+[Sun Apr  3 13:17:34 2016] [debug] arch_file_data.c(149) Service name :notify
+[Sun Apr  3 13:17:34 2016] [debug] arch_file_data.c(149) Service name :div
+[Sun Apr  3 13:17:34 2016] [debug] arch_file_data.c(149) Service name :add
+[Sun Apr  3 13:17:34 2016] [debug] arch_file_data.c(149) Service name :sub
+[Sun Apr  3 13:17:34 2016] [debug] arch_file_data.c(149) Service name :mul
+[Sun Apr  3 13:17:34 2016] [debug] arch_file_data.c(149) Service name :version
+[Sun Apr  3 13:17:43 2016] [...TRACE...] conf_init.c(154) Entry:axis2_build_client_conf_ctx
+[Sun Apr  3 13:17:43 2016] [debug] phase.c(121) axis2_handler_t *request_uri_based_dispatcher added to the index 0 of the phase Transport
+[Sun Apr  3 13:17:43 2016] [debug] phase.c(121) axis2_handler_t *addressing_based_dispatcher added to the index 1 of the phase Transport
+[Sun Apr  3 13:17:43 2016] [...TRACE...] conf_builder.c(155) Entry:axis2_conf_builder_populate_conf
+[Sun Apr  3 13:17:43 2016] [debug] phase.c(121) axis2_handler_t *rest_dispatcher added to the index 0 of the phase Dispatch
+[Sun Apr  3 13:17:43 2016] [debug] phase.c(121) axis2_handler_t *soap_message_body_based_dispatcher added to the index 1 of the phase Dispatch
+[Sun Apr  3 13:17:43 2016] [debug] phase.c(121) axis2_handler_t *soap_action_based_dispatcher added to the index 2 of the phase Dispatch
+[Sun Apr  3 13:17:43 2016] [debug] phase.c(121) axis2_handler_t *dispatch_post_conditions_evaluator added to the index 0 of the phase PostDispatch
+[Sun Apr  3 13:17:43 2016] [debug] phase.c(121) axis2_handler_t *context_handler added to the index 1 of the phase PostDispatch
+[Sun Apr  3 13:17:43 2016] [debug] conf_builder.c(234) No custom dispatching order found. Continue with the default dispatching order
+[Sun Apr  3 13:17:43 2016] [...TRACE...] conf_builder.c(345) Entry:axis2_conf_builder_process_module_refs
+[Sun Apr  3 13:17:43 2016] [debug] conf_builder.c(379) Module addressing found in axis2.xml
+[Sun Apr  3 13:17:43 2016] [...TRACE...] conf_builder.c(392) Exit:axis2_conf_builder_process_module_refs
+[Sun Apr  3 13:17:43 2016] [...TRACE...] conf_builder.c(692) Entry:axis2_conf_builder_process_transport_senders
+[Sun Apr  3 13:17:43 2016] [debug] class_loader.c(140) /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/lib/libaxis2_http_sender.so shared lib loaded successfully
+[Sun Apr  3 13:17:43 2016] [...TRACE...] conf_builder.c(1054) Exit:axis2_conf_builder_process_transport_senders
+[Sun Apr  3 13:17:43 2016] [...TRACE...] conf_builder.c(1069) Entry:axis2_conf_builder_process_transport_recvs
+[Sun Apr  3 13:17:43 2016] [debug] class_loader.c(140) /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/lib/libaxis2_http_receiver.so shared lib loaded successfully
+[Sun Apr  3 13:17:43 2016] [...TRACE...] conf_builder.c(1419) Exit:axis2_conf_builder_process_transport_recvs
+[Sun Apr  3 13:17:43 2016] [...TRACE...] conf_builder.c(533) Entry:axis2_conf_builder_process_phase_orders
+[Sun Apr  3 13:17:43 2016] [...TRACE...] conf_builder.c(617) Entry:axis2_conf_builder_get_phase_list
+[Sun Apr  3 13:17:43 2016] [...TRACE...] conf_builder.c(680) Exit:axis2_conf_builder_get_phase_list
+[Sun Apr  3 13:17:43 2016] [...TRACE...] conf_builder.c(617) Entry:axis2_conf_builder_get_phase_list
+[Sun Apr  3 13:17:43 2016] [...TRACE...] conf_builder.c(680) Exit:axis2_conf_builder_get_phase_list
+[Sun Apr  3 13:17:43 2016] [...TRACE...] conf_builder.c(617) Entry:axis2_conf_builder_get_phase_list
+[Sun Apr  3 13:17:43 2016] [...TRACE...] conf_builder.c(680) Exit:axis2_conf_builder_get_phase_list
+[Sun Apr  3 13:17:43 2016] [...TRACE...] conf_builder.c(617) Entry:axis2_conf_builder_get_phase_list
+[Sun Apr  3 13:17:43 2016] [...TRACE...] conf_builder.c(680) Exit:axis2_conf_builder_get_phase_list
+[Sun Apr  3 13:17:43 2016] [...TRACE...] conf_builder.c(598) Exit:axis2_conf_builder_process_phase_orders
+[Sun Apr  3 13:17:43 2016] [...TRACE...] conf_builder.c(333) Exit:axis2_conf_builder_populate_conf
+[Sun Apr  3 13:17:43 2016] [...TRACE...] module_builder.c(139) Entry:axis2_module_builder_populate_module
+[Sun Apr  3 13:17:43 2016] [...TRACE...] module_builder.c(367) Exit:axis2_module_builder_populate_module
+[Sun Apr  3 13:17:43 2016] [debug] dep_engine.c(1283) axis2_dep_engine_load_module_dll: DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/modules/addressing/libaxis2_mod_addr.so
+[Sun Apr  3 13:17:43 2016] [debug] class_loader.c(140) /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/modules/addressing/libaxis2_mod_addr.so shared lib loaded successfully
+[Sun Apr  3 13:17:43 2016] [...TRACE...] module_builder.c(139) Entry:axis2_module_builder_populate_module
+[Sun Apr  3 13:17:43 2016] [...TRACE...] module_builder.c(367) Exit:axis2_module_builder_populate_module
+[Sun Apr  3 13:17:43 2016] [debug] dep_engine.c(1283) axis2_dep_engine_load_module_dll: DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/modules/logging/libaxis2_mod_log.so
+[Sun Apr  3 13:17:43 2016] [debug] class_loader.c(140) /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/modules/logging/libaxis2_mod_log.so shared lib loaded successfully
+[Sun Apr  3 13:17:43 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/Axis2Service/libAxis2Service.so
+[Sun Apr  3 13:17:43 2016] [debug] om_element.c(1114) There are no child elements for the node
+[Sun Apr  3 13:17:43 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/Calculator/libCalculator.so
+[Sun Apr  3 13:17:43 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/echo/libecho.so
+[Sun Apr  3 13:17:43 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/math/libmath.so
+[Sun Apr  3 13:17:43 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/mtom/libmtom.so
+[Sun Apr  3 13:17:43 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/mtom_callback/libmtom_callback.so
+[Sun Apr  3 13:17:43 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/notify/libnotify.so
+[Sun Apr  3 13:17:43 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/sg_math/libadd.so
+[Sun Apr  3 13:17:43 2016] [debug] om_element.c(1114) There are no child elements for the node
+[Sun Apr  3 13:17:43 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/sg_math/libsub.so
+[Sun Apr  3 13:17:43 2016] [debug] om_element.c(1114) There are no child elements for the node
+[Sun Apr  3 13:17:43 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/sg_math/libmul.so
+[Sun Apr  3 13:17:43 2016] [debug] om_element.c(1114) There are no child elements for the node
+[Sun Apr  3 13:17:43 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/sg_math/libdiv.so
+[Sun Apr  3 13:17:43 2016] [debug] om_element.c(1114) There are no child elements for the node
+[Sun Apr  3 13:17:43 2016] [debug] svc_builder.c(318) DLL path is : /home/andrey/Projects/Axis2/axis2c-bin-1.6.0-linux/services/version/libversion.so
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(184) Entry:axis2_phase_resolver_engage_module_globally
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(927) Entry:axis2_phase_resolver_add_module_handlers_to_system_defined_phases
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingInHandler to phase Transport
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(1068) Exit:axis2_phase_resolver_add_module_handlers_to_system_defined_phases
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(222) svc name is:div
+[Sun Apr  3 13:17:43 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(139) Service name is : div
+[Sun Apr  3 13:17:43 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(1123) Operation name is : div
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(222) svc name is:version
+[Sun Apr  3 13:17:43 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(139) Service name is : version
+[Sun Apr  3 13:17:43 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(1123) Operation name is : GetVersion
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(222) svc name is:Axis2Service
+[Sun Apr  3 13:17:43 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(139) Service name is : Axis2Service
+[Sun Apr  3 13:17:43 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(1123) Operation name is : greet
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(222) svc name is:mtom_callback
+[Sun Apr  3 13:17:43 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(139) Service name is : mtom_callback
+[Sun Apr  3 13:17:43 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(1123) Operation name is : mtomSample
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(222) svc name is:notify
+[Sun Apr  3 13:17:43 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(139) Service name is : notify
+[Sun Apr  3 13:17:43 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(1123) Operation name is : notify
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(222) svc name is:add
+[Sun Apr  3 13:17:43 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(139) Service name is : add
+[Sun Apr  3 13:17:43 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(1123) Operation name is : add
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(222) svc name is:Calculator
+[Sun Apr  3 13:17:43 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(139) Service name is : Calculator
+[Sun Apr  3 13:17:43 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(1123) Operation name is : div
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(1123) Operation name is : add
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(1123) Operation name is : sub
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(1123) Operation name is : mul
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(222) svc name is:math
+[Sun Apr  3 13:17:43 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(139) Service name is : math
+[Sun Apr  3 13:17:43 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(1123) Operation name is : div
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(1123) Operation name is : add
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(1123) Operation name is : sub
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(1123) Operation name is : mul
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(222) svc name is:sub
+[Sun Apr  3 13:17:43 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(139) Service name is : sub
+[Sun Apr  3 13:17:43 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(1123) Operation name is : sub
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(222) svc name is:mtom
+[Sun Apr  3 13:17:43 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(139) Service name is : mtom
+[Sun Apr  3 13:17:43 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(1123) Operation name is : mtomSample
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(222) svc name is:mul
+[Sun Apr  3 13:17:43 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(139) Service name is : mul
+[Sun Apr  3 13:17:43 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(1123) Operation name is : mul
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(222) svc name is:echo
+[Sun Apr  3 13:17:43 2016] [...TRACE...] svc.c(1088) Entry:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(139) Service name is : echo
+[Sun Apr  3 13:17:43 2016] [...TRACE...] svc.c(1144) Exit:axis2_svc_add_module_ops
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(1094) Entry:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(1123) Operation name is : echoString
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(1291) Exit:axis2_phase_resolver_add_module_handlers_to_user_defined_phases
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(339) Exit:axis2_phase_resolver_engage_module_globally
+[Sun Apr  3 13:17:43 2016] [...TRACE...] conf_init.c(229) Entry:axis2_init_modules
+[Sun Apr  3 13:17:43 2016] [...TRACE...] conf_init.c(268) Exit:axis2_init_modules
+[Sun Apr  3 13:17:43 2016] [...TRACE...] conf_init.c(365) Entry:axis2_init_transports
+[Sun Apr  3 13:17:43 2016] [...TRACE...] conf_init.c(416) Exit:axis2_init_transports
+[Sun Apr  3 13:17:43 2016] [...TRACE...] conf_init.c(217) Exit:axis2_build_client_conf_ctx
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(139) Service name is : __ANONYMOUS_SERVICE__
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(2058) Trying to add this handler AddressingInHandler to system pre defined phases , but those handlers are already added to global chain which run irrespective of the service
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(873) Exit:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(873) Exit:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(2058) Trying to add this handler AddressingInHandler to system pre defined phases , but those handlers are already added to global chain which run irrespective of the service
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(873) Exit:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(873) Exit:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(2058) Trying to add this handler AddressingInHandler to system pre defined phases , but those handlers are already added to global chain which run irrespective of the service
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(873) Exit:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(699) Entry:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:43 2016] [debug] phase_resolver.c(723) Module name is:addressing
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(124) axis2_phase_holder_add_handler start
+[Sun Apr  3 13:17:43 2016] [debug] phase_holder.c(139) Add handler AddressingOutHandler to phase MessageOut
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_holder.c(149) axis2_phase_holder_add_handler end status = SUCCESS
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase_resolver.c(873) Exit:axis2_phase_resolver_build_execution_chains_for_op
+[Sun Apr  3 13:17:43 2016] [debug] op_client.c(888) Start:axis2_op_client_infer_transport
+[Sun Apr  3 13:17:43 2016] [debug] op_client.c(954) End:axis2_op_client_infer_transport
+[Sun Apr  3 13:17:43 2016] [...TRACE...] engine.c(91) axis2_engine_send start
+[Sun Apr  3 13:17:43 2016] [...TRACE...] engine.c(680) Start:axis2_engine_invoke_phases
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase.c(166) Entry:axis2_phase_invoke
+[Sun Apr  3 13:17:43 2016] [debug] phase.c(210) Invoke the handler AddressingOutHandler within the phase MessageOut
+[Sun Apr  3 13:17:43 2016] [info]  Starting addressing out handler
+[Sun Apr  3 13:17:43 2016] [debug] addr_out_handler.c(133) No action present. Stop processing addressing
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase.c(273) Exit:axis2_phase_invoke
+[Sun Apr  3 13:17:43 2016] [...TRACE...] engine.c(701) End:axis2_engine_invoke_phases
+[Sun Apr  3 13:17:43 2016] [...TRACE...] http_transport_sender.c(194) Entry:axis2_http_transport_sender_invoke
+[Sun Apr  3 13:17:43 2016] [debug] http_transport_sender.c(246) ctx_epr:http://localhost:9090/axis2/services/hello
+[Sun Apr  3 13:17:43 2016] [debug] http_transport_sender.c(805) using axis2 native http sender.
+[Sun Apr  3 13:17:43 2016] [...TRACE...] http_sender.c(252) Entry:axis2_http_sender_send
+[Sun Apr  3 13:17:43 2016] [debug] http_sender.c(416) msg_ctx_id:urn:uuid:4df4818a-f985-1e51-267d-207c8f01162d
+[Sun Apr  3 13:17:43 2016] [error] http_sender.c(1411) Error occurred in transport
+[Sun Apr  3 13:17:43 2016] [...TRACE...] http_sender.c(1593) Entry:axis2_http_sender_process_response
+[Sun Apr  3 13:17:43 2016] [...TRACE...] http_sender.c(1614) Exit:axis2_http_sender_process_response
+[Sun Apr  3 13:17:43 2016] [debug] http_transport_sender.c(822) OP name axutil_qname_get_localpart = http://www.w3.org/2004/08/wsdl/out-in
+[Sun Apr  3 13:17:43 2016] [debug] soap_builder.c(945) identified soap version is soap12
+[Sun Apr  3 13:17:43 2016] [...TRACE...] http_transport_sender.c(596) Exit:axis2_http_transport_sender_invoke
+[Sun Apr  3 13:17:43 2016] [...TRACE...] engine.c(192) axis2_engine_send end successfully
+[Sun Apr  3 13:17:43 2016] [...TRACE...] engine.c(211) Start:axis2_engine_receive
+[Sun Apr  3 13:17:43 2016] [...TRACE...] engine.c(680) Start:axis2_engine_invoke_phases
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase.c(166) Entry:axis2_phase_invoke
+[Sun Apr  3 13:17:43 2016] [debug] phase.c(210) Invoke the handler request_uri_based_dispatcher within the phase Transport
+[Sun Apr  3 13:17:43 2016] [debug] phase.c(210) Invoke the handler AddressingInHandler within the phase Transport
+[Sun Apr  3 13:17:43 2016] [info]  Starting addressing in handler
+[Sun Apr  3 13:17:43 2016] [debug] phase.c(210) Invoke the handler addressing_based_dispatcher within the phase Transport
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase.c(273) Exit:axis2_phase_invoke
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase.c(166) Entry:axis2_phase_invoke
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase.c(273) Exit:axis2_phase_invoke
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase.c(166) Entry:axis2_phase_invoke
+[Sun Apr  3 13:17:43 2016] [debug] phase.c(210) Invoke the handler rest_dispatcher within the phase Dispatch
+[Sun Apr  3 13:17:43 2016] [debug] phase.c(210) Invoke the handler soap_message_body_based_dispatcher within the phase Dispatch
+[Sun Apr  3 13:17:43 2016] [debug] soap_body_disp.c(127) Checking for service using SOAP message body's first child's namespace URI : http://www.w3.org/2003/05/soap-envelope
+[Sun Apr  3 13:17:43 2016] [debug] phase.c(210) Invoke the handler soap_action_based_dispatcher within the phase Dispatch
+[Sun Apr  3 13:17:43 2016] [debug] soap_action_disp.c(89) Checking for service using SOAPAction is not implemented
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase.c(273) Exit:axis2_phase_invoke
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase.c(166) Entry:axis2_phase_invoke
+[Sun Apr  3 13:17:43 2016] [debug] phase.c(210) Invoke the handler dispatch_post_conditions_evaluator within the phase PostDispatch
+[Sun Apr  3 13:17:43 2016] [debug] phase.c(210) Invoke the handler context_handler within the phase PostDispatch
+[Sun Apr  3 13:17:43 2016] [...TRACE...] ctx_handler.c(102) Entry:axis2_ctx_handler_invoke
+[Sun Apr  3 13:17:43 2016] [...TRACE...] phase.c(273) Exit:axis2_phase_invoke
+[Sun Apr  3 13:17:43 2016] [...TRACE...] engine.c(701) End:axis2_engine_invoke_phases
+[Sun Apr  3 13:17:43 2016] [...TRACE...] engine.c(680) Start:axis2_engine_invoke_phases
+[Sun Apr  3 13:17:43 2016] [...TRACE...] engine.c(701) End:axis2_engine_invoke_phases
+[Sun Apr  3 13:17:43 2016] [...TRACE...] engine.c(323) Exit:axis2_engine_receive
+[Sun Apr  3 13:17:43 2016] [debug] arch_file_data.c(149) Service name :Axis2Service
+[Sun Apr  3 13:17:43 2016] [debug] arch_file_data.c(149) Service name :Calculator
+[Sun Apr  3 13:17:43 2016] [debug] arch_file_data.c(149) Service name :echo
+[Sun Apr  3 13:17:43 2016] [debug] arch_file_data.c(149) Service name :math
+[Sun Apr  3 13:17:43 2016] [debug] arch_file_data.c(149) Service name :mtom
+[Sun Apr  3 13:17:43 2016] [debug] arch_file_data.c(149) Service name :mtom_callback
+[Sun Apr  3 13:17:43 2016] [debug] arch_file_data.c(149) Service name :notify
+[Sun Apr  3 13:17:43 2016] [debug] arch_file_data.c(149) Service name :div
+[Sun Apr  3 13:17:43 2016] [debug] arch_file_data.c(149) Service name :add
+[Sun Apr  3 13:17:43 2016] [debug] arch_file_data.c(149) Service name :sub
+[Sun Apr  3 13:17:43 2016] [debug] arch_file_data.c(149) Service name :mul
+[Sun Apr  3 13:17:43 2016] [debug] arch_file_data.c(149) Service name :version

@@ -1,0 +1,16 @@
+/home/veret/Projects/NSConsole/nc-ui-prototype/Axis2/jansson-2.7/CMakeFiles/check.dir
+/home/veret/Projects/NSConsole/nc-ui-prototype/Axis2/jansson-2.7/CMakeFiles/jansson.dir
+/home/veret/Projects/NSConsole/nc-ui-prototype/Axis2/jansson-2.7/CMakeFiles/json_process.dir
+/home/veret/Projects/NSConsole/nc-ui-prototype/Axis2/jansson-2.7/CMakeFiles/test_array.dir
+/home/veret/Projects/NSConsole/nc-ui-prototype/Axis2/jansson-2.7/CMakeFiles/test_copy.dir
+/home/veret/Projects/NSConsole/nc-ui-prototype/Axis2/jansson-2.7/CMakeFiles/test_dump.dir
+/home/veret/Projects/NSConsole/nc-ui-prototype/Axis2/jansson-2.7/CMakeFiles/test_dump_callback.dir
+/home/veret/Projects/NSConsole/nc-ui-prototype/Axis2/jansson-2.7/CMakeFiles/test_equal.dir
+/home/veret/Projects/NSConsole/nc-ui-prototype/Axis2/jansson-2.7/CMakeFiles/test_load.dir
+/home/veret/Projects/NSConsole/nc-ui-prototype/Axis2/jansson-2.7/CMakeFiles/test_loadb.dir
+/home/veret/Projects/NSConsole/nc-ui-prototype/Axis2/jansson-2.7/CMakeFiles/test_memory_funcs.dir
+/home/veret/Projects/NSConsole/nc-ui-prototype/Axis2/jansson-2.7/CMakeFiles/test_number.dir
+/home/veret/Projects/NSConsole/nc-ui-prototype/Axis2/jansson-2.7/CMakeFiles/test_object.dir
+/home/veret/Projects/NSConsole/nc-ui-prototype/Axis2/jansson-2.7/CMakeFiles/test_pack.dir
+/home/veret/Projects/NSConsole/nc-ui-prototype/Axis2/jansson-2.7/CMakeFiles/test_simple.dir
+/home/veret/Projects/NSConsole/nc-ui-prototype/Axis2/jansson-2.7/CMakeFiles/test_unpack.dir

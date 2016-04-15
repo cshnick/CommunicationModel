@@ -1,0 +1,180 @@
+[Sun Apr 03 14:25:37 2016] [info]  Starting Axis2 TCP server....
+[Sun Apr 03 14:25:37 2016] [info]  Server port : 9091
+[Sun Apr 03 14:25:37 2016] [info]  Repo location : ../
+[Sun Apr 03 14:25:37 2016] [info]  Read Timeout : 60000 ms
+[Sun Apr 03 14:25:37 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *request_uri_based_dispatcher added to the index 0 of the phase Transport
+[Sun Apr 03 14:25:37 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *addressing_based_dispatcher added to the index 1 of the phase Transport
+[Sun Apr 03 14:25:37 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *rest_dispatcher added to the index 0 of the phase Dispatch
+[Sun Apr 03 14:25:37 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *soap_message_body_based_dispatcher added to the index 1 of the phase Dispatch
+[Sun Apr 03 14:25:37 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *soap_action_based_dispatcher added to the index 2 of the phase Dispatch
+[Sun Apr 03 14:25:37 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *dispatch_post_conditions_evaluator added to the index 0 of the phase PostDispatch
+[Sun Apr 03 14:25:37 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *context_handler added to the index 1 of the phase PostDispatch
+[Sun Apr 03 14:25:37 2016] [debug] ..\..\src\core\deployment\conf_builder.c(234) No custom dispatching order found. Continue with the default dispatching order
+[Sun Apr 03 14:25:37 2016] [debug] ..\..\src\core\deployment\conf_builder.c(379) Module addressing found in axis2.xml
+[Sun Apr 03 14:25:37 2016] [error] ..\..\util\src\class_loader.c(167) Loading shared library ..//lib/axis2_http_sender.dll  Failed. DLERROR IS DLL Load Error 126: Не найден указанный модуль.
+
+[Sun Apr 03 14:25:37 2016] [error] ..\..\src\core\deployment\conf_builder.c(903) Transport sender is NULL for transport http, unable to continue
+[Sun Apr 03 14:25:37 2016] [error] ..\..\src\core\deployment\conf_builder.c(262) Processing transport senders failed, unable to continue
+[Sun Apr 03 14:25:37 2016] [error] ..\..\src\core\deployment\dep_engine.c(752) Populating Axis2 Configuration failed
+[Sun Apr 03 14:25:37 2016] [error] ..\..\src\core\deployment\conf_init.c(64) Loading deployment engine failed for repository ../.
+[Sun Apr 03 14:25:37 2016] [error] ..\..\src\core\transport\tcp\server\simple_tcp_server\tcp_server_main.c(182) Server creation failed: Error code: 103 :: Failed in creating DLL
+[Sun Apr 03 14:26:30 2016] [info]  Starting Axis2 TCP server....
+[Sun Apr 03 14:26:30 2016] [info]  Server port : 9091
+[Sun Apr 03 14:26:30 2016] [info]  Repo location : ../
+[Sun Apr 03 14:26:30 2016] [info]  Read Timeout : 60000 ms
+[Sun Apr 03 14:26:30 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *request_uri_based_dispatcher added to the index 0 of the phase Transport
+[Sun Apr 03 14:26:30 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *addressing_based_dispatcher added to the index 1 of the phase Transport
+[Sun Apr 03 14:26:30 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *rest_dispatcher added to the index 0 of the phase Dispatch
+[Sun Apr 03 14:26:30 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *soap_message_body_based_dispatcher added to the index 1 of the phase Dispatch
+[Sun Apr 03 14:26:30 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *soap_action_based_dispatcher added to the index 2 of the phase Dispatch
+[Sun Apr 03 14:26:30 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *dispatch_post_conditions_evaluator added to the index 0 of the phase PostDispatch
+[Sun Apr 03 14:26:30 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *context_handler added to the index 1 of the phase PostDispatch
+[Sun Apr 03 14:26:30 2016] [debug] ..\..\src\core\deployment\conf_builder.c(234) No custom dispatching order found. Continue with the default dispatching order
+[Sun Apr 03 14:26:30 2016] [debug] ..\..\src\core\deployment\conf_builder.c(379) Module addressing found in axis2.xml
+[Sun Apr 03 14:26:30 2016] [error] ..\..\util\src\class_loader.c(167) Loading shared library ..//lib/axis2_http_sender.dll  Failed. DLERROR IS DLL Load Error 126: Не найден указанный модуль.
+
+[Sun Apr 03 14:26:30 2016] [error] ..\..\src\core\deployment\conf_builder.c(903) Transport sender is NULL for transport http, unable to continue
+[Sun Apr 03 14:26:30 2016] [error] ..\..\src\core\deployment\conf_builder.c(262) Processing transport senders failed, unable to continue
+[Sun Apr 03 14:26:30 2016] [error] ..\..\src\core\deployment\dep_engine.c(752) Populating Axis2 Configuration failed
+[Sun Apr 03 14:26:30 2016] [error] ..\..\src\core\deployment\conf_init.c(64) Loading deployment engine failed for repository ../.
+[Sun Apr 03 14:26:30 2016] [error] ..\..\src\core\transport\tcp\server\simple_tcp_server\tcp_server_main.c(182) Server creation failed: Error code: 103 :: Failed in creating DLL
+[Sun Apr 03 14:26:42 2016] [info]  Starting Axis2 TCP server....
+[Sun Apr 03 14:26:42 2016] [info]  Server port : 9091
+[Sun Apr 03 14:26:42 2016] [info]  Repo location : ../
+[Sun Apr 03 14:26:42 2016] [info]  Read Timeout : 60000 ms
+[Sun Apr 03 14:26:42 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *request_uri_based_dispatcher added to the index 0 of the phase Transport
+[Sun Apr 03 14:26:42 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *addressing_based_dispatcher added to the index 1 of the phase Transport
+[Sun Apr 03 14:26:42 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *rest_dispatcher added to the index 0 of the phase Dispatch
+[Sun Apr 03 14:26:42 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *soap_message_body_based_dispatcher added to the index 1 of the phase Dispatch
+[Sun Apr 03 14:26:42 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *soap_action_based_dispatcher added to the index 2 of the phase Dispatch
+[Sun Apr 03 14:26:42 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *dispatch_post_conditions_evaluator added to the index 0 of the phase PostDispatch
+[Sun Apr 03 14:26:42 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *context_handler added to the index 1 of the phase PostDispatch
+[Sun Apr 03 14:26:42 2016] [debug] ..\..\src\core\deployment\conf_builder.c(234) No custom dispatching order found. Continue with the default dispatching order
+[Sun Apr 03 14:26:42 2016] [debug] ..\..\src\core\deployment\conf_builder.c(379) Module addressing found in axis2.xml
+[Sun Apr 03 14:26:42 2016] [error] ..\..\util\src\class_loader.c(167) Loading shared library ..//lib/axis2_http_sender.dll  Failed. DLERROR IS DLL Load Error 126: Не найден указанный модуль.
+
+[Sun Apr 03 14:26:42 2016] [error] ..\..\src\core\deployment\conf_builder.c(903) Transport sender is NULL for transport http, unable to continue
+[Sun Apr 03 14:26:42 2016] [error] ..\..\src\core\deployment\conf_builder.c(262) Processing transport senders failed, unable to continue
+[Sun Apr 03 14:26:42 2016] [error] ..\..\src\core\deployment\dep_engine.c(752) Populating Axis2 Configuration failed
+[Sun Apr 03 14:26:42 2016] [error] ..\..\src\core\deployment\conf_init.c(64) Loading deployment engine failed for repository ../.
+[Sun Apr 03 14:26:42 2016] [error] ..\..\src\core\transport\tcp\server\simple_tcp_server\tcp_server_main.c(182) Server creation failed: Error code: 103 :: Failed in creating DLL
+[Sun Apr 03 14:27:02 2016] [info]  Starting Axis2 TCP server....
+[Sun Apr 03 14:27:02 2016] [info]  Server port : 9091
+[Sun Apr 03 14:27:02 2016] [info]  Repo location : ../
+[Sun Apr 03 14:27:02 2016] [info]  Read Timeout : 60000 ms
+[Sun Apr 03 14:27:02 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *request_uri_based_dispatcher added to the index 0 of the phase Transport
+[Sun Apr 03 14:27:02 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *addressing_based_dispatcher added to the index 1 of the phase Transport
+[Sun Apr 03 14:27:02 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *rest_dispatcher added to the index 0 of the phase Dispatch
+[Sun Apr 03 14:27:02 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *soap_message_body_based_dispatcher added to the index 1 of the phase Dispatch
+[Sun Apr 03 14:27:02 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *soap_action_based_dispatcher added to the index 2 of the phase Dispatch
+[Sun Apr 03 14:27:02 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *dispatch_post_conditions_evaluator added to the index 0 of the phase PostDispatch
+[Sun Apr 03 14:27:02 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *context_handler added to the index 1 of the phase PostDispatch
+[Sun Apr 03 14:27:02 2016] [debug] ..\..\src\core\deployment\conf_builder.c(234) No custom dispatching order found. Continue with the default dispatching order
+[Sun Apr 03 14:27:02 2016] [debug] ..\..\src\core\deployment\conf_builder.c(379) Module addressing found in axis2.xml
+[Sun Apr 03 14:27:02 2016] [error] ..\..\util\src\class_loader.c(167) Loading shared library ..//lib/axis2_http_sender.dll  Failed. DLERROR IS DLL Load Error 126: Не найден указанный модуль.
+
+[Sun Apr 03 14:27:02 2016] [error] ..\..\src\core\deployment\conf_builder.c(903) Transport sender is NULL for transport http, unable to continue
+[Sun Apr 03 14:27:02 2016] [error] ..\..\src\core\deployment\conf_builder.c(262) Processing transport senders failed, unable to continue
+[Sun Apr 03 14:27:02 2016] [error] ..\..\src\core\deployment\dep_engine.c(752) Populating Axis2 Configuration failed
+[Sun Apr 03 14:27:02 2016] [error] ..\..\src\core\deployment\conf_init.c(64) Loading deployment engine failed for repository ../.
+[Sun Apr 03 14:27:02 2016] [error] ..\..\src\core\transport\tcp\server\simple_tcp_server\tcp_server_main.c(182) Server creation failed: Error code: 103 :: Failed in creating DLL
+[Sun Apr 03 14:27:08 2016] [info]  Starting Axis2 TCP server....
+[Sun Apr 03 14:27:08 2016] [info]  Server port : 9091
+[Sun Apr 03 14:27:08 2016] [info]  Repo location : ../
+[Sun Apr 03 14:27:08 2016] [info]  Read Timeout : 60000 ms
+[Sun Apr 03 14:27:08 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *request_uri_based_dispatcher added to the index 0 of the phase Transport
+[Sun Apr 03 14:27:08 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *addressing_based_dispatcher added to the index 1 of the phase Transport
+[Sun Apr 03 14:27:08 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *rest_dispatcher added to the index 0 of the phase Dispatch
+[Sun Apr 03 14:27:08 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *soap_message_body_based_dispatcher added to the index 1 of the phase Dispatch
+[Sun Apr 03 14:27:08 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *soap_action_based_dispatcher added to the index 2 of the phase Dispatch
+[Sun Apr 03 14:27:08 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *dispatch_post_conditions_evaluator added to the index 0 of the phase PostDispatch
+[Sun Apr 03 14:27:08 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *context_handler added to the index 1 of the phase PostDispatch
+[Sun Apr 03 14:27:08 2016] [debug] ..\..\src\core\deployment\conf_builder.c(234) No custom dispatching order found. Continue with the default dispatching order
+[Sun Apr 03 14:27:08 2016] [debug] ..\..\src\core\deployment\conf_builder.c(379) Module addressing found in axis2.xml
+[Sun Apr 03 14:27:08 2016] [error] ..\..\util\src\class_loader.c(167) Loading shared library ..//lib/axis2_http_sender.dll  Failed. DLERROR IS DLL Load Error 126: Не найден указанный модуль.
+
+[Sun Apr 03 14:27:08 2016] [error] ..\..\src\core\deployment\conf_builder.c(903) Transport sender is NULL for transport http, unable to continue
+[Sun Apr 03 14:27:08 2016] [error] ..\..\src\core\deployment\conf_builder.c(262) Processing transport senders failed, unable to continue
+[Sun Apr 03 14:27:08 2016] [error] ..\..\src\core\deployment\dep_engine.c(752) Populating Axis2 Configuration failed
+[Sun Apr 03 14:27:08 2016] [error] ..\..\src\core\deployment\conf_init.c(64) Loading deployment engine failed for repository ../.
+[Sun Apr 03 14:27:08 2016] [error] ..\..\src\core\transport\tcp\server\simple_tcp_server\tcp_server_main.c(182) Server creation failed: Error code: 103 :: Failed in creating DLL
+[Sun Apr 03 14:27:26 2016] [info]  Starting Axis2 TCP server....
+[Sun Apr 03 14:27:26 2016] [info]  Server port : 9091
+[Sun Apr 03 14:27:26 2016] [info]  Repo location : ../
+[Sun Apr 03 14:27:26 2016] [info]  Read Timeout : 60000 ms
+[Sun Apr 03 14:27:26 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *request_uri_based_dispatcher added to the index 0 of the phase Transport
+[Sun Apr 03 14:27:26 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *addressing_based_dispatcher added to the index 1 of the phase Transport
+[Sun Apr 03 14:27:26 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *rest_dispatcher added to the index 0 of the phase Dispatch
+[Sun Apr 03 14:27:26 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *soap_message_body_based_dispatcher added to the index 1 of the phase Dispatch
+[Sun Apr 03 14:27:26 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *soap_action_based_dispatcher added to the index 2 of the phase Dispatch
+[Sun Apr 03 14:27:26 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *dispatch_post_conditions_evaluator added to the index 0 of the phase PostDispatch
+[Sun Apr 03 14:27:26 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *context_handler added to the index 1 of the phase PostDispatch
+[Sun Apr 03 14:27:26 2016] [debug] ..\..\src\core\deployment\conf_builder.c(234) No custom dispatching order found. Continue with the default dispatching order
+[Sun Apr 03 14:27:26 2016] [debug] ..\..\src\core\deployment\conf_builder.c(379) Module addressing found in axis2.xml
+[Sun Apr 03 14:27:26 2016] [error] ..\..\util\src\class_loader.c(167) Loading shared library ..//lib/axis2_http_sender.dll  Failed. DLERROR IS DLL Load Error 126: Не найден указанный модуль.
+
+[Sun Apr 03 14:27:26 2016] [error] ..\..\src\core\deployment\conf_builder.c(903) Transport sender is NULL for transport http, unable to continue
+[Sun Apr 03 14:27:26 2016] [error] ..\..\src\core\deployment\conf_builder.c(262) Processing transport senders failed, unable to continue
+[Sun Apr 03 14:27:26 2016] [error] ..\..\src\core\deployment\dep_engine.c(752) Populating Axis2 Configuration failed
+[Sun Apr 03 14:27:26 2016] [error] ..\..\src\core\deployment\conf_init.c(64) Loading deployment engine failed for repository ../.
+[Sun Apr 03 14:27:26 2016] [error] ..\..\src\core\transport\tcp\server\simple_tcp_server\tcp_server_main.c(182) Server creation failed: Error code: 103 :: Failed in creating DLL
+[Sun Apr 03 14:27:40 2016] [info]  Starting Axis2 TCP server....
+[Sun Apr 03 14:27:40 2016] [info]  Server port : 9091
+[Sun Apr 03 14:27:40 2016] [info]  Repo location : ../
+[Sun Apr 03 14:27:40 2016] [info]  Read Timeout : 60000 ms
+[Sun Apr 03 14:27:40 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *request_uri_based_dispatcher added to the index 0 of the phase Transport
+[Sun Apr 03 14:27:40 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *addressing_based_dispatcher added to the index 1 of the phase Transport
+[Sun Apr 03 14:27:40 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *rest_dispatcher added to the index 0 of the phase Dispatch
+[Sun Apr 03 14:27:40 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *soap_message_body_based_dispatcher added to the index 1 of the phase Dispatch
+[Sun Apr 03 14:27:40 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *soap_action_based_dispatcher added to the index 2 of the phase Dispatch
+[Sun Apr 03 14:27:40 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *dispatch_post_conditions_evaluator added to the index 0 of the phase PostDispatch
+[Sun Apr 03 14:27:40 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *context_handler added to the index 1 of the phase PostDispatch
+[Sun Apr 03 14:27:40 2016] [debug] ..\..\src\core\deployment\conf_builder.c(234) No custom dispatching order found. Continue with the default dispatching order
+[Sun Apr 03 14:27:40 2016] [debug] ..\..\src\core\deployment\conf_builder.c(379) Module addressing found in axis2.xml
+[Sun Apr 03 14:27:41 2016] [error] ..\..\util\src\class_loader.c(167) Loading shared library ..//lib/axis2_http_sender.dll  Failed. DLERROR IS DLL Load Error 126: Не найден указанный модуль.
+
+[Sun Apr 03 14:27:41 2016] [error] ..\..\src\core\deployment\conf_builder.c(903) Transport sender is NULL for transport http, unable to continue
+[Sun Apr 03 14:27:41 2016] [error] ..\..\src\core\deployment\conf_builder.c(262) Processing transport senders failed, unable to continue
+[Sun Apr 03 14:27:41 2016] [error] ..\..\src\core\deployment\dep_engine.c(752) Populating Axis2 Configuration failed
+[Sun Apr 03 14:27:41 2016] [error] ..\..\src\core\deployment\conf_init.c(64) Loading deployment engine failed for repository ../.
+[Sun Apr 03 14:27:41 2016] [error] ..\..\src\core\transport\tcp\server\simple_tcp_server\tcp_server_main.c(182) Server creation failed: Error code: 103 :: Failed in creating DLL
+[Sun Apr 03 14:27:56 2016] [info]  Starting Axis2 TCP server....
+[Sun Apr 03 14:27:56 2016] [info]  Server port : 9091
+[Sun Apr 03 14:27:56 2016] [info]  Repo location : ../
+[Sun Apr 03 14:27:56 2016] [info]  Read Timeout : 60000 ms
+[Sun Apr 03 14:27:56 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *request_uri_based_dispatcher added to the index 0 of the phase Transport
+[Sun Apr 03 14:27:56 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *addressing_based_dispatcher added to the index 1 of the phase Transport
+[Sun Apr 03 14:27:56 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *rest_dispatcher added to the index 0 of the phase Dispatch
+[Sun Apr 03 14:27:56 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *soap_message_body_based_dispatcher added to the index 1 of the phase Dispatch
+[Sun Apr 03 14:27:56 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *soap_action_based_dispatcher added to the index 2 of the phase Dispatch
+[Sun Apr 03 14:27:56 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *dispatch_post_conditions_evaluator added to the index 0 of the phase PostDispatch
+[Sun Apr 03 14:27:56 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *context_handler added to the index 1 of the phase PostDispatch
+[Sun Apr 03 14:27:56 2016] [debug] ..\..\src\core\deployment\conf_builder.c(234) No custom dispatching order found. Continue with the default dispatching order
+[Sun Apr 03 14:27:56 2016] [debug] ..\..\src\core\deployment\conf_builder.c(379) Module addressing found in axis2.xml
+[Sun Apr 03 14:27:56 2016] [error] ..\..\util\src\class_loader.c(167) Loading shared library ..//lib/axis2_http_sender.dll  Failed. DLERROR IS DLL Load Error 126: Не найден указанный модуль.
+
+[Sun Apr 03 14:27:56 2016] [error] ..\..\src\core\deployment\conf_builder.c(903) Transport sender is NULL for transport http, unable to continue
+[Sun Apr 03 14:27:56 2016] [error] ..\..\src\core\deployment\conf_builder.c(262) Processing transport senders failed, unable to continue
+[Sun Apr 03 14:27:56 2016] [error] ..\..\src\core\deployment\dep_engine.c(752) Populating Axis2 Configuration failed
+[Sun Apr 03 14:27:56 2016] [error] ..\..\src\core\deployment\conf_init.c(64) Loading deployment engine failed for repository ../.
+[Sun Apr 03 14:27:56 2016] [error] ..\..\src\core\transport\tcp\server\simple_tcp_server\tcp_server_main.c(182) Server creation failed: Error code: 103 :: Failed in creating DLL
+[Sun Apr 03 14:30:13 2016] [info]  Starting Axis2 TCP server....
+[Sun Apr 03 14:30:13 2016] [info]  Server port : 9091
+[Sun Apr 03 14:30:13 2016] [info]  Repo location : ../
+[Sun Apr 03 14:30:13 2016] [info]  Read Timeout : 60000 ms
+[Sun Apr 03 14:30:13 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *request_uri_based_dispatcher added to the index 0 of the phase Transport
+[Sun Apr 03 14:30:13 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *addressing_based_dispatcher added to the index 1 of the phase Transport
+[Sun Apr 03 14:30:13 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *rest_dispatcher added to the index 0 of the phase Dispatch
+[Sun Apr 03 14:30:13 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *soap_message_body_based_dispatcher added to the index 1 of the phase Dispatch
+[Sun Apr 03 14:30:13 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *soap_action_based_dispatcher added to the index 2 of the phase Dispatch
+[Sun Apr 03 14:30:13 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *dispatch_post_conditions_evaluator added to the index 0 of the phase PostDispatch
+[Sun Apr 03 14:30:13 2016] [debug] ..\..\src\core\engine\phase.c(121) axis2_handler_t *context_handler added to the index 1 of the phase PostDispatch
+[Sun Apr 03 14:30:13 2016] [debug] ..\..\src\core\deployment\conf_builder.c(234) No custom dispatching order found. Continue with the default dispatching order
+[Sun Apr 03 14:30:13 2016] [debug] ..\..\src\core\deployment\conf_builder.c(379) Module addressing found in axis2.xml
+[Sun Apr 03 14:30:13 2016] [error] ..\..\util\src\class_loader.c(167) Loading shared library ..//lib/axis2_http_sender.dll  Failed. DLERROR IS DLL Load Error 126: Не найден указанный модуль.
+
+[Sun Apr 03 14:30:13 2016] [error] ..\..\src\core\deployment\conf_builder.c(903) Transport sender is NULL for transport http, unable to continue
+[Sun Apr 03 14:30:13 2016] [error] ..\..\src\core\deployment\conf_builder.c(262) Processing transport senders failed, unable to continue
+[Sun Apr 03 14:30:13 2016] [error] ..\..\src\core\deployment\dep_engine.c(752) Populating Axis2 Configuration failed
+[Sun Apr 03 14:30:13 2016] [error] ..\..\src\core\deployment\conf_init.c(64) Loading deployment engine failed for repository ../.
+[Sun Apr 03 14:30:13 2016] [error] ..\..\src\core\transport\tcp\server\simple_tcp_server\tcp_server_main.c(182) Server creation failed: Error code: 103 :: Failed in creating DLL

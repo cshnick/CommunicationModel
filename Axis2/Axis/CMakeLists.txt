@@ -1,0 +1,5 @@
+add_subdirectory(Client)
+add_subdirectory(Service)
+add_subdirectory(REST_Service)
+add_subdirectory(REST_Service_WSDL)
+add_subdirectory(REST_Client)

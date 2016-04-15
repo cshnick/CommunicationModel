@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{A721D673-CEEB-39EC-85D8-03178DD54C3F}</ProjectGUID>
+    <WindowsTargetPlatformVersion>10.0.10586.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>Axis2Client</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\Projects\Axis2\Axis\Client\bin\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Axis2Client.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Axis2Client</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\Projects\Axis2\Axis\Client\bin\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Axis2Client.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Axis2Client</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:\Projects\Axis2\Axis\Client\bin\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Axis2Client.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Axis2Client</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\Projects\Axis2\Axis\Client\bin\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Axis2Client.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Axis2Client</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions> -g -O0 -m32 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\axis2c-bin-1.6.0-win32\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\Projects\Axis2\Axis\Client;\include\axis2-1.6.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Projects\Axis2\Axis\Client;\include\axis2-1.6.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;axutil.lib;axiom.lib;axis2_parser.lib;axis2_engine.lib;axis2_http_sender.lib;axis2_tcp_receiver.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\..\axis2c-bin-1.6.0-win32\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/Projects/Axis2/Axis/Client/Debug/Axis2Client.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/Projects/Axis2/Axis/Client/bin/Debug/Axis2Client.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions> -g -O0 -m32 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>E:\Projects\Axis2\Axis\Client;\include\axis2-1.6.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\Projects\Axis2\Axis\Client;\include\axis2-1.6.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Projects\Axis2\Axis\Client;\include\axis2-1.6.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;E:\Projects\Axis2\axis2c-bin-1.6.0-win32\lib\axutil.dll;E:\Projects\Axis2\axis2c-bin-1.6.0-win32\lib\axiom.dll;E:\Projects\Axis2\axis2c-bin-1.6.0-win32\lib\axis2_parser.dll;E:\Projects\Axis2\axis2c-bin-1.6.0-win32\lib\axis2_engine.dll;E:\Projects\Axis2\axis2c-bin-1.6.0-win32\lib\axis2_http_sender.dll;E:\Projects\Axis2\axis2c-bin-1.6.0-win32\lib\axis2_tcp_receiver.dll;-lpthread;-ldl</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/Projects/Axis2/Axis/Client/Release/Axis2Client.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/Projects/Axis2/Axis/Client/bin/Release/Axis2Client.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalOptions> -g -O0 -m32 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>E:\Projects\Axis2\Axis\Client;\include\axis2-1.6.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\Projects\Axis2\Axis\Client;\include\axis2-1.6.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Projects\Axis2\Axis\Client;\include\axis2-1.6.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;E:\Projects\Axis2\axis2c-bin-1.6.0-win32\lib\axutil.dll;E:\Projects\Axis2\axis2c-bin-1.6.0-win32\lib\axiom.dll;E:\Projects\Axis2\axis2c-bin-1.6.0-win32\lib\axis2_parser.dll;E:\Projects\Axis2\axis2c-bin-1.6.0-win32\lib\axis2_engine.dll;E:\Projects\Axis2\axis2c-bin-1.6.0-win32\lib\axis2_http_sender.dll;E:\Projects\Axis2\axis2c-bin-1.6.0-win32\lib\axis2_tcp_receiver.dll;-lpthread;-ldl</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>No</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/Projects/Axis2/Axis/Client/MinSizeRel/Axis2Client.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/Projects/Axis2/Axis/Client/bin/MinSizeRel/Axis2Client.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalOptions> -g -O0 -m32 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>E:\Projects\Axis2\Axis\Client;\include\axis2-1.6.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\Projects\Axis2\Axis\Client;\include\axis2-1.6.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Projects\Axis2\Axis\Client;\include\axis2-1.6.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;E:\Projects\Axis2\axis2c-bin-1.6.0-win32\lib\axutil.dll;E:\Projects\Axis2\axis2c-bin-1.6.0-win32\lib\axiom.dll;E:\Projects\Axis2\axis2c-bin-1.6.0-win32\lib\axis2_parser.dll;E:\Projects\Axis2\axis2c-bin-1.6.0-win32\lib\axis2_engine.dll;E:\Projects\Axis2\axis2c-bin-1.6.0-win32\lib\axis2_http_sender.dll;E:\Projects\Axis2\axis2c-bin-1.6.0-win32\lib\axis2_tcp_receiver.dll;-lpthread;-ldl</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>Debug</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/Projects/Axis2/Axis/Client/RelWithDebInfo/Axis2Client.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/Projects/Axis2/Axis/Client/bin/RelWithDebInfo/Axis2Client.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\Projects\Axis2\Axis\Client\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule E:/Projects/Axis2/Axis/Client/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+E:\Programs\cmake-3.5.1-win32-x86\bin\cmake.exe -HE:/Projects/Axis2/Axis/Client -BE:/Projects/Axis2/Axis/Client --check-stamp-file E:\Projects\Axis2\Axis\Client\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:/Projects/Axis2/Axis/Client/CMakeLists.txt;E:\Projects\Axis2\Axis\Client\CMakeLists.txt;E:\Projects\Axis2\Axis\Client\CMakeFiles\3.5.1\CMakeSystem.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeSystemSpecificInitialize.cmake;E:\Projects\Axis2\Axis\Client\CMakeFiles\3.5.1\CMakeCCompiler.cmake;E:\Projects\Axis2\Axis\Client\CMakeFiles\3.5.1\CMakeCXXCompiler.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeSystemSpecificInformation.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeGenericSystem.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\Platform\Windows.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\Platform\WindowsPaths.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeCInformation.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeLanguageInformation.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\Platform\Windows-MSVC-C.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\Platform\Windows-MSVC.cmake;E:\Projects\Axis2\Axis\Client\CMakeFiles\3.5.1\CMakeRCCompiler.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeRCInformation.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeCommonLanguageInclude.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeCXXInformation.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeLanguageInformation.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\Compiler\MSVC-CXX.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\Platform\Windows-MSVC-CXX.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\Platform\Windows-MSVC.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeCommonLanguageInclude.cmake;E:\Projects\Axis2\Axis\Client\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">E:\Projects\Axis2\Axis\Client\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule E:/Projects/Axis2/Axis/Client/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+E:\Programs\cmake-3.5.1-win32-x86\bin\cmake.exe -HE:/Projects/Axis2/Axis/Client -BE:/Projects/Axis2/Axis/Client --check-stamp-file E:\Projects\Axis2\Axis\Client\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:/Projects/Axis2/Axis/Client/CMakeLists.txt;E:\Projects\Axis2\Axis\Client\CMakeLists.txt;E:\Projects\Axis2\Axis\Client\CMakeFiles\3.5.1\CMakeSystem.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeSystemSpecificInitialize.cmake;E:\Projects\Axis2\Axis\Client\CMakeFiles\3.5.1\CMakeCCompiler.cmake;E:\Projects\Axis2\Axis\Client\CMakeFiles\3.5.1\CMakeCXXCompiler.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeSystemSpecificInformation.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeGenericSystem.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\Platform\Windows.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\Platform\WindowsPaths.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeCInformation.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeLanguageInformation.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\Platform\Windows-MSVC-C.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\Platform\Windows-MSVC.cmake;E:\Projects\Axis2\Axis\Client\CMakeFiles\3.5.1\CMakeRCCompiler.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeRCInformation.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeCommonLanguageInclude.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeCXXInformation.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeLanguageInformation.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\Compiler\MSVC-CXX.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\Platform\Windows-MSVC-CXX.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\Platform\Windows-MSVC.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeCommonLanguageInclude.cmake;E:\Projects\Axis2\Axis\Client\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">E:\Projects\Axis2\Axis\Client\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule E:/Projects/Axis2/Axis/Client/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+E:\Programs\cmake-3.5.1-win32-x86\bin\cmake.exe -HE:/Projects/Axis2/Axis/Client -BE:/Projects/Axis2/Axis/Client --check-stamp-file E:\Projects\Axis2\Axis\Client\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:/Projects/Axis2/Axis/Client/CMakeLists.txt;E:\Projects\Axis2\Axis\Client\CMakeLists.txt;E:\Projects\Axis2\Axis\Client\CMakeFiles\3.5.1\CMakeSystem.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeSystemSpecificInitialize.cmake;E:\Projects\Axis2\Axis\Client\CMakeFiles\3.5.1\CMakeCCompiler.cmake;E:\Projects\Axis2\Axis\Client\CMakeFiles\3.5.1\CMakeCXXCompiler.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeSystemSpecificInformation.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeGenericSystem.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\Platform\Windows.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\Platform\WindowsPaths.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeCInformation.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeLanguageInformation.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\Platform\Windows-MSVC-C.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\Platform\Windows-MSVC.cmake;E:\Projects\Axis2\Axis\Client\CMakeFiles\3.5.1\CMakeRCCompiler.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeRCInformation.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeCommonLanguageInclude.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeCXXInformation.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeLanguageInformation.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\Compiler\MSVC-CXX.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\Platform\Windows-MSVC-CXX.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\Platform\Windows-MSVC.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeCommonLanguageInclude.cmake;E:\Projects\Axis2\Axis\Client\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">E:\Projects\Axis2\Axis\Client\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule E:/Projects/Axis2/Axis/Client/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+E:\Programs\cmake-3.5.1-win32-x86\bin\cmake.exe -HE:/Projects/Axis2/Axis/Client -BE:/Projects/Axis2/Axis/Client --check-stamp-file E:\Projects\Axis2\Axis\Client\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:/Projects/Axis2/Axis/Client/CMakeLists.txt;E:\Projects\Axis2\Axis\Client\CMakeLists.txt;E:\Projects\Axis2\Axis\Client\CMakeFiles\3.5.1\CMakeSystem.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeSystemSpecificInitialize.cmake;E:\Projects\Axis2\Axis\Client\CMakeFiles\3.5.1\CMakeCCompiler.cmake;E:\Projects\Axis2\Axis\Client\CMakeFiles\3.5.1\CMakeCXXCompiler.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeSystemSpecificInformation.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeGenericSystem.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\Platform\Windows.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\Platform\WindowsPaths.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeCInformation.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeLanguageInformation.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\Platform\Windows-MSVC-C.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\Platform\Windows-MSVC.cmake;E:\Projects\Axis2\Axis\Client\CMakeFiles\3.5.1\CMakeRCCompiler.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeRCInformation.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeCommonLanguageInclude.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeCXXInformation.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeLanguageInformation.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\Compiler\MSVC-CXX.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\Platform\Windows-MSVC-CXX.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\Platform\Windows-MSVC.cmake;E:\Programs\cmake-3.5.1-win32-x86\share\cmake-3.5\Modules\CMakeCommonLanguageInclude.cmake;E:\Projects\Axis2\Axis\Client\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">E:\Projects\Axis2\Axis\Client\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="E:\Projects\Axis2\Axis\Client\Axis2Service.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
