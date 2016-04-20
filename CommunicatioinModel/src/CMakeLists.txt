@@ -1,0 +1,3 @@
+add_subdirectory(litesql)
+add_subdirectory(poco)
+add_subdirectory(applications)

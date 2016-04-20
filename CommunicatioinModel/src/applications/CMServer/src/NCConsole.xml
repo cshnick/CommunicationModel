@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE database SYSTEM "../../../litesql/src/generator/litesql.dtd" >
+<database name="NCConsoleStorage" namespace="ncconsole">
+	<!-- Objects -->
+
+	<object name="Credential">
+		<field name="authname" type="string"></field>
+		<field name="username" type="string"></field>
+	</object>
+
+	<object name="Device">
+		<field name="uniquename" type="string" unique="true"></field>
+		<field name="name" type="string"></field>
+	</object>
+
+	<object name="DeviceGroup">
+		<field name="uniquename" type="string" unique="true"></field>
+		<field name="name" type="string"></field>
+	</object>
+
+	<object name="Profile">
+		<field name="uniquename" type="string" unique="true"></field>
+		<field name="name" type="string"></field>
+	</object>
+
+	<object name="Subnet">
+		<field name="uniquename" type="string" unique="true"></field>
+		<field name="name" type="string"></field>
+	</object>
+
+	<!-- Relations -->
+	<relation id="DevGroup">
+		<relate object="Device" limit="many" handle="groups" />
+		<relate object="DeviceGroup" limit="many" handle="devices" />
+	</relation>
+
+	<relation id="DevSubnet">
+		<relate object="Device" limit="one" handle="subnet" />
+		<relate object="Subnet" limit="one" handle="device" />
+	</relation>
+
+	<!--   <relation id="DevProfile">
+		<relate object="Device" limit="one" handle="profile" />
+		<relate object="Profile" limit="one" handle="device" />
+	</relation>
+
+	<relation id="DevProfile">
+		<relate object="Device" limit="one" handle="profile" />
+		<relate object="Profile" limit="one" handle="device" />
+	</relation> -->
+</database> 
