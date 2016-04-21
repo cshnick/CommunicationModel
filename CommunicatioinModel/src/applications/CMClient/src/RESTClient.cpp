@@ -21,6 +21,14 @@
 #include "Poco/Path.h"
 #include "Poco/URI.h"
 #include "Poco/Exception.h"
+#include "Poco/Logger.h"
+#include "Poco/FileChannel.h"
+#include "Poco/Channel.h"
+#include "Poco/SplitterChannel.h"
+#include "Poco/ConsoleChannel.h"
+#include "Poco/FileChannel.h"
+#include "Poco/PatternFormatter.h"
+#include "Poco/FormattingChannel.h"
 #include <iostream>
 #include <sstream>
 
@@ -28,20 +36,17 @@
 #include <mutex>
 #include <map>
 
-using Poco::Net::HTTPClientSession;
-using Poco::Net::HTTPRequest;
-using Poco::Net::HTTPResponse;
-using Poco::Net::HTTPMessage;
-using Poco::StreamCopier;
-using Poco::Path;
-using Poco::URI;
-using Poco::Exception;
-
 using namespace std;
+using namespace Poco;
+using namespace Poco::Net;
 
-static mutex s_mutex;
-static constexpr const char* localhost = "localhost";
-static constexpr const int defaultport = 9990;
+//namespace {
+
+mutex s_mutex;
+constexpr const char* localhost = "localhost";
+constexpr const int defaultport = 9990;
+
+//} //anoo
 
 using RMJContainer = struct {
 	string resource;
@@ -93,8 +98,9 @@ bool doRequest(const RMJContainer &rmj) {
 	HTTPRequest request(rmj.method, rmj.resource, HTTPMessage::HTTP_1_1);
 
 	request.add("json", rmj.json);
-	std::cout << "Write request" << endl;
-	request.write(cout);
+	stringstream reqss;
+	request.write(reqss);
+	Logger::get("main").information("Request: %s", reqss.str().c_str());
 
 	HTTPResponse response;
 
@@ -103,11 +109,13 @@ bool doRequest(const RMJContainer &rmj) {
 	std::cout << response.getStatus() << " " << response.getReason() << std::endl;
 	lock_guard<mutex> guard(mutex);
 	if (response.getStatus() != Poco::Net::HTTPResponse::HTTP_UNAUTHORIZED) {
+
 		StreamCopier::copyStream(rs, std::cout);
 		return true;
 	} else {
 		Poco::NullOutputStream null;
-		StreamCopier::copyStream(rs, null);
+		string buffer;
+		StreamCopier::copyToString(rs, buffer);
 		return false;
 	}
 	return false;
@@ -118,6 +126,16 @@ int main(int argc, char** argv)
 {
 	try {
 		const int threadNum = 1;
+		Poco::AutoPtr<SplitterChannel> splitterch(new SplitterChannel());
+		Poco::AutoPtr<ConsoleChannel> consolech(new ConsoleChannel);
+		Poco::AutoPtr<FileChannel> filech(new FileChannel("RESTClient.log"));
+		splitterch->addChannel(consolech);
+		splitterch->addChannel(filech);
+
+		Poco::AutoPtr<Formatter> formatter(new PatternFormatter("%d-%m-%Y %H:%M:%S %s: %t"));
+		Poco::AutoPtr<Channel> formattingChannel(new FormattingChannel(formatter, splitterch));
+
+		Logger::create("main", formattingChannel);
 
 //		for (const RMJContainer &rmj : g_requests) {
 //			doRequest(rmj);
@@ -127,7 +145,7 @@ int main(int argc, char** argv)
 		doRequest(postcreds);
 
 	} catch (Exception& exc) {
-		std::cerr << exc.displayText() << std::endl;
+		Logger::get("main").critical("Error: %s", exc.what());
 		return 1;
 	}
 

@@ -32,7 +32,14 @@
 #include "Poco/Util/Option.h"
 #include "Poco/Util/OptionSet.h"
 #include "Poco/Util/HelpFormatter.h"
+#include "Poco/Logger.h"
+#include "Poco/ConsoleChannel.h"
+#include "Poco/SplitterChannel.h"
+#include "Poco/FormattingChannel.h"
+#include "Poco/FileChannel.h"
+#include "Poco/PatternFormatter.h"
 #include <iostream>
+#include <memory>
 
 using Poco::Net::ServerSocket;
 using Poco::Net::HTTPRequestHandler;
@@ -52,6 +59,14 @@ using Poco::Util::HelpFormatter;
 using Poco::CountingInputStream;
 using Poco::NullOutputStream;
 using Poco::StreamCopier;
+using Poco::Channel;
+using Poco::ConsoleChannel;
+using Poco::FileChannel;
+using Poco::SplitterChannel;
+using Poco::Formatter;
+using Poco::FormattingChannel;
+using Poco::PatternFormatter;
+using Poco::Logger;
 
 class RESTServer: public Poco::Util::ServerApplication {
 public:
@@ -97,7 +112,19 @@ protected:
 		if (_helpRequested) {
 			displayHelp();
 		} else {
-			std::cout << "Starting RESTServer..." << std::endl;
+			Poco::AutoPtr<SplitterChannel> splitterch(new SplitterChannel());
+			Poco::AutoPtr<ConsoleChannel> consolech(new ConsoleChannel);
+			Poco::AutoPtr<FileChannel> filech(new FileChannel("RESTServer.log"));
+			splitterch->addChannel(consolech);
+			splitterch->addChannel(filech);
+
+			Poco::AutoPtr<Formatter> formatter(new PatternFormatter("%d-%m-%Y %H:%M:%S %s: %t"));
+			Poco::AutoPtr<Channel> formattingChannel(new FormattingChannel(formatter, splitterch));
+
+			Logger::create("main", formattingChannel);
+
+
+			Logger::get("main").information("Starting RESTServer...");
 			unsigned short port = (unsigned short) config().getInt("RESTServer.port", 9990);
 
 			ServerSocket svs(port);
@@ -115,6 +142,7 @@ private:
 };
 
 int main(int argc, char** argv) {
+
 	RESTServer app;
 	return app.run(argc, argv);
 }

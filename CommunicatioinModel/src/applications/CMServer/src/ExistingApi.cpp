@@ -12,6 +12,7 @@
 #include <regex>
 
 #include "Poco/URI.h"
+#include "Poco/Logger.h"
 #include "Poco/JSON/Parser.h"
 #include "Poco/Net/HTTPServerResponse.h"
 
@@ -57,12 +58,10 @@ public:
 		Dynamic::Var json_obj = parser.parse(json); //Throw error if can't parse
 		response.setStatusAndReason(HTTPResponse::HTTP_OK);
 		response.setContentType("application/json");
-		RequestSourceHandlerFunc f = std::bind(&ExistingApiRequestHandlerPrivate::handleTest, this);
 	}
 
-
 	void handleTest(HTTPServerRequest& request, HTTPServerResponse& response) {
-		cout << "Within request test" << endl;
+		Logger::get("main").information("Within request test");
 	}
 
 private:
@@ -73,14 +72,14 @@ private:
 
 RegexToHandlerVec ExistingApiRequestHandlerPrivate::rthMap  = {
 	{".*/status", HTTPRequest::HTTP_GET, [] (HTTPServerRequest& request, HTTPServerResponse& response) {
-			cout << "Status match" << std::endl;
+		    Logger::get("main").information("Status match");
 			ostream &os = response.send();
 			os << "";
 		}
 	},
 
 	{".*/register", HTTPRequest::HTTP_POST, [] (HTTPServerRequest& request, HTTPServerResponse& response) {
-			cout << "Register match" << std::endl;
+			Logger::get("main").information("Register match");
 			ostream &os = response.send();
 			os << "{\n" <<
 					"\t\"name\" : \"Licensing Server Name\",\n" <<
@@ -92,21 +91,21 @@ RegexToHandlerVec ExistingApiRequestHandlerPrivate::rthMap  = {
 	},
 
 	{".*/lsserver", HTTPRequest::HTTP_DELETE, [] (HTTPServerRequest& request, HTTPServerResponse& response) {
-			cout << "lsserver DEL" << std::endl;
+			Logger::get("main").information("lsserver DEL");
 			ostream &os = response.send();
 			os << "";
 		}
 	},
 
 	{".*/lsserver", HTTPRequest::HTTP_POST, [] (HTTPServerRequest& request, HTTPServerResponse& response) {
-			cout << "lsserver POST" << std::endl;
+			Logger::get("main").information("lsserver POST");
 			ostream &os = response.send();
 			os << "";
 		}
 	},
 
 	{".*/lsserver", HTTPRequest::HTTP_GET, [] (HTTPServerRequest& request, HTTPServerResponse& response) {
-			cout << "lsserver GET" << std::endl;
+			Logger::get("main").information("lsserver GET");
 			ostream &os = response.send();
 			os << "";
 		}
@@ -167,7 +166,7 @@ RegexToHandlerVec ExistingApiRequestHandlerPrivate::rthMap  = {
 			cerr << "Error" << e.what() << endl;
 		}
 
-		cout << "postcreds POST" << std::endl;
+		Logger::get("main").information("postcreds POST");
 		ostream &os = response.send();
 		os << "";
 	}
