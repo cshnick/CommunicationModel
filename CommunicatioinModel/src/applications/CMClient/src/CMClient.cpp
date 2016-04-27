@@ -121,7 +121,6 @@ bool doRequest(const RMJContainer &rmj) {
 	return false;
 }
 
-
 int main(int argc, char** argv)
 {
 	try {
@@ -144,9 +143,8 @@ int main(int argc, char** argv)
 		RMJContainer postcreds {"/postcreds", HTTPRequest::HTTP_POST, "{\"username\": \"test\"}"};
 		doRequest(postcreds);
 
-	} catch (Exception& exc) {
-		Logger::get("main").critical("Error: %s", exc.what());
-		return 1;
+	} catch (const exception &e) {
+		Logger::get("main").critical(e.what());
 	}
 
 	return 0;

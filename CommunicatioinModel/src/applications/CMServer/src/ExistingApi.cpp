@@ -162,8 +162,8 @@ RegexToHandlerVec ExistingApiRequestHandlerPrivate::rthMap  = {
 				teterev.update();
 			}
 
-		} catch (const Exception &e) {
-			cerr << "Error" << e.what() << endl;
+		} catch (const exception &e) {
+			Logger::get("main").critical(e.what());
 		}
 
 		Logger::get("main").information("postcreds POST");

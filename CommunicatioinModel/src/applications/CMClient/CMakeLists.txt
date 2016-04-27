@@ -1,4 +1,4 @@
-set(SAMPLE_NAME "RESTClient")
+set(SAMPLE_NAME "CMClient")
 
 set(LOCAL_SRCS "")
 aux_source_directory(src LOCAL_SRCS)

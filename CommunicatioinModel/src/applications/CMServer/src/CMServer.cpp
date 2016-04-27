@@ -123,7 +123,6 @@ protected:
 
 			Logger::create("main", formattingChannel);
 
-
 			Logger::get("main").information("Starting RESTServer...");
 			unsigned short port = (unsigned short) config().getInt("RESTServer.port", 9990);
 

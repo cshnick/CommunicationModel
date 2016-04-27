@@ -608,20 +608,24 @@ const litesql::FieldType Profile::Id("id",A_field_type_integer,table__);
 const litesql::FieldType Profile::Type("type",A_field_type_string,table__);
 const litesql::FieldType Profile::Uniquename("uniquename",A_field_type_string,table__);
 const litesql::FieldType Profile::Name("name",A_field_type_string,table__);
+const litesql::FieldType Profile::IdScreenResolution("idScreenResolution",A_field_type_integer,table__);
 void Profile::initValues() {
 }
 void Profile::defaults() {
     id = 0;
+    idScreenResolution = 0;
 }
 Profile::Profile(const litesql::Database& db)
-     : litesql::Persistent(db), id(Id), type(Type), uniquename(Uniquename), name(Name) {
+     : litesql::Persistent(db), id(Id), type(Type), uniquename(Uniquename), name(Name), idScreenResolution(IdScreenResolution) {
     defaults();
 }
 Profile::Profile(const litesql::Database& db, const litesql::Record& rec)
-     : litesql::Persistent(db, rec), id(Id), type(Type), uniquename(Uniquename), name(Name) {
+     : litesql::Persistent(db, rec), id(Id), type(Type), uniquename(Uniquename), name(Name), idScreenResolution(IdScreenResolution) {
     defaults();
-    size_t size = (rec.size() > 4) ? 4 : rec.size();
+    size_t size = (rec.size() > 5) ? 5 : rec.size();
     switch(size) {
+    case 5: idScreenResolution = convert<const std::string&, int>(rec[4]);
+        idScreenResolution.setModified(false);
     case 4: name = convert<const std::string&, std::string>(rec[3]);
         name.setModified(false);
     case 3: uniquename = convert<const std::string&, std::string>(rec[2]);
@@ -633,7 +637,7 @@ Profile::Profile(const litesql::Database& db, const litesql::Record& rec)
     }
 }
 Profile::Profile(const Profile& obj)
-     : litesql::Persistent(obj), id(obj.id), type(obj.type), uniquename(obj.uniquename), name(obj.name) {
+     : litesql::Persistent(obj), id(obj.id), type(obj.type), uniquename(obj.uniquename), name(obj.name), idScreenResolution(obj.idScreenResolution) {
 }
 const Profile& Profile::operator=(const Profile& obj) {
     if (this != &obj) {
@@ -641,6 +645,7 @@ const Profile& Profile::operator=(const Profile& obj) {
         type = obj.type;
         uniquename = obj.uniquename;
         name = obj.name;
+        idScreenResolution = obj.idScreenResolution;
     }
     litesql::Persistent::operator=(obj);
     return *this;
@@ -661,6 +666,9 @@ std::string Profile::insert(litesql::Record& tables, litesql::Records& fieldRecs
     fields.push_back(name.name());
     values.push_back(name);
     name.setModified(false);
+    fields.push_back(idScreenResolution.name());
+    values.push_back(idScreenResolution);
+    idScreenResolution.setModified(false);
     fieldRecs.push_back(fields);
     valueRecs.push_back(values);
     return litesql::Persistent::insert(tables, fieldRecs, valueRecs, sequence__);
@@ -680,6 +688,7 @@ void Profile::addUpdates(Updates& updates) {
     updateField(updates, table__, type);
     updateField(updates, table__, uniquename);
     updateField(updates, table__, name);
+    updateField(updates, table__, idScreenResolution);
 }
 void Profile::addIDUpdates(Updates& updates) {
 }
@@ -688,6 +697,7 @@ void Profile::getFieldTypes(std::vector<litesql::FieldType>& ftypes) {
     ftypes.push_back(Type);
     ftypes.push_back(Uniquename);
     ftypes.push_back(Name);
+    ftypes.push_back(IdScreenResolution);
 }
 void Profile::delRecord() {
     deleteFromTable(table__, id);
@@ -733,6 +743,7 @@ std::unique_ptr<Profile> Profile::upcastCopy() const {
     np->type = type;
     np->uniquename = uniquename;
     np->name = name;
+    np->idScreenResolution = idScreenResolution;
     np->inDatabase = inDatabase;
     return unique_ptr<Profile>(np);
 }
@@ -742,6 +753,7 @@ std::ostream & operator<<(std::ostream& os, Profile o) {
     os << o.type.name() << " = " << o.type << std::endl;
     os << o.uniquename.name() << " = " << o.uniquename << std::endl;
     os << o.name.name() << " = " << o.name << std::endl;
+    os << o.idScreenResolution.name() << " = " << o.idScreenResolution << std::endl;
     os << "-------------------------------------" << std::endl;
     return os;
 }
@@ -931,7 +943,7 @@ std::vector<litesql::Database::SchemaItem> NCConsoleStorage::getSchema() const {
     res.push_back(Database::SchemaItem("Credential","table","CREATE TABLE Credential (id " + rowIdType + ",type " + backend->getSQLType(A_field_type_string,"") + "" +",authname " + backend->getSQLType(A_field_type_string,"") + "" +",username " + backend->getSQLType(A_field_type_string,"") + "" +")"));
     res.push_back(Database::SchemaItem("Device","table","CREATE TABLE Device (id " + rowIdType + ",type " + backend->getSQLType(A_field_type_string,"") + "" +",uniquename " + backend->getSQLType(A_field_type_string,"") + " UNIQUE" +",name " + backend->getSQLType(A_field_type_string,"") + "" +")"));
     res.push_back(Database::SchemaItem("DeviceGroup","table","CREATE TABLE DeviceGroup (id " + rowIdType + ",type " + backend->getSQLType(A_field_type_string,"") + "" +",uniquename " + backend->getSQLType(A_field_type_string,"") + " UNIQUE" +",name " + backend->getSQLType(A_field_type_string,"") + "" +")"));
-    res.push_back(Database::SchemaItem("Profile","table","CREATE TABLE Profile (id " + rowIdType + ",type " + backend->getSQLType(A_field_type_string,"") + "" +",uniquename " + backend->getSQLType(A_field_type_string,"") + " UNIQUE" +",name " + backend->getSQLType(A_field_type_string,"") + "" +")"));
+    res.push_back(Database::SchemaItem("Profile","table","CREATE TABLE Profile (id " + rowIdType + ",type " + backend->getSQLType(A_field_type_string,"") + "" +",uniquename " + backend->getSQLType(A_field_type_string,"") + " UNIQUE" +",name " + backend->getSQLType(A_field_type_string,"") + "" +",idScreenResolution " + backend->getSQLType(A_field_type_integer,"") + "" +")"));
     res.push_back(Database::SchemaItem("Subnet","table","CREATE TABLE Subnet (id " + rowIdType + ",type " + backend->getSQLType(A_field_type_string,"") + "" +",uniquename " + backend->getSQLType(A_field_type_string,"") + " UNIQUE" +",name " + backend->getSQLType(A_field_type_string,"") + "" +")"));
     res.push_back(Database::SchemaItem("Device_DeviceGroup_DevGroup","table","CREATE TABLE Device_DeviceGroup_DevGroup (Device1 " + backend->getSQLType(A_field_type_integer,"") + "" +",DeviceGroup2 " + backend->getSQLType(A_field_type_integer,"") + "" +")"));
     res.push_back(Database::SchemaItem("Device_Subnet_DevSubnet","table","CREATE TABLE Device_Subnet_DevSubnet (Device1 " + backend->getSQLType(A_field_type_integer,"") + " UNIQUE" +",Subnet2 " + backend->getSQLType(A_field_type_integer,"") + " UNIQUE" +")"));
