@@ -43,8 +43,9 @@ using namespace Poco::Net;
 //namespace {
 
 mutex s_mutex;
+constexpr const char* protocol  = "https";
 constexpr const char* localhost = "localhost";
-constexpr const int defaultport = 9990;
+constexpr const int defaultport = 9443;
 
 //} //anoo
 
@@ -85,7 +86,7 @@ RegexToHandlerVec g_requests {
 
 bool doRequest(const RMJContainer &rmj) {
 	stringstream ss;
-	ss << "http://" << localhost << ":" << defaultport;
+	ss << protocol << "://" << localhost << ":" << defaultport;
 	string prefix = ss.str();
 	URI uri(prefix + rmj.resource);
 

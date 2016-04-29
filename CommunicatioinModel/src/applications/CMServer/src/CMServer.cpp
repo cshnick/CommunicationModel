@@ -24,6 +24,8 @@
 #include "Poco/Net/PartHandler.h"
 #include "Poco/Net/MessageHeader.h"
 #include "Poco/Net/ServerSocket.h"
+#include "Poco/Net/SecureServerSocket.h"
+#include "Poco/Net/SecureStreamSocket.h"
 #include "Poco/CountingStream.h"
 #include "Poco/NullStream.h"
 #include "Poco/StreamCopier.h"
@@ -42,6 +44,8 @@
 #include <memory>
 
 using Poco::Net::ServerSocket;
+using Poco::Net::SecureServerSocket;
+using Poco::Net::SecureStreamSocket;
 using Poco::Net::HTTPRequestHandler;
 using Poco::Net::HTTPRequestHandlerFactory;
 using Poco::Net::HTTPServer;
@@ -123,10 +127,10 @@ protected:
 
 			Logger::create("main", formattingChannel);
 
-			Logger::get("main").information("Starting RESTServer...");
-			unsigned short port = (unsigned short) config().getInt("RESTServer.port", 9990);
+			Logger::get("main").information("Starting CMServer...");
+			unsigned short port = (unsigned short) config().getInt("CMServer.port", 9443);
 
-			ServerSocket svs(port);
+			SecureServerSocket svs(port);
 			HTTPServer srv(new ExistingApiHandlerFactory, svs, new HTTPServerParams);
 			// start the HTTPServer
 			srv.start();

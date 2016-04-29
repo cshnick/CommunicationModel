@@ -18,6 +18,13 @@ aux_source_directory(src LOCAL_SRCS)
 
 add_executable( ${SAMPLE_NAME} ${LOCAL_SRCS} )
 set_property(TARGET ${SAMPLE_NAME} PROPERTY CXX_STANDARD 11)
-target_link_libraries( ${SAMPLE_NAME} PocoNet PocoUtil PocoJSON PocoXML PocoFoundation ${litesql-target})
+target_link_libraries( ${SAMPLE_NAME} PocoNet PocoNetSSL PocoUtil PocoJSON PocoXML PocoFoundation ${litesql-target})
 
-add_dependencies(${SAMPLE_NAME} gen_sql_bindings)
+add_custom_target(
+    copy_resources
+    COMMAND cmake -E copy ${CMAKE_CURRENT_SOURCE_DIR}/any.pem ${EXECUTABLE_OUTPUT_PATH}
+    COMMAND cmake -E copy ${CMAKE_CURRENT_SOURCE_DIR}/${SAMPLE_NAME}.properties ${EXECUTABLE_OUTPUT_PATH}
+    COMMENT "Copying resources"
+)
+
+add_dependencies(${SAMPLE_NAME} gen_sql_bindings copy_resources)
