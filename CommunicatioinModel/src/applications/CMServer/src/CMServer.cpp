@@ -72,11 +72,11 @@ using Poco::FormattingChannel;
 using Poco::PatternFormatter;
 using Poco::Logger;
 
-class RESTServer: public Poco::Util::ServerApplication {
+class CMServer: public Poco::Util::ServerApplication {
 public:
-	RESTServer()
+	CMServer()
 		:_helpRequested(false) {}
-	~RESTServer() {}
+	~CMServer() {}
 
 protected:
 	void initialize(Application& self) {
@@ -146,6 +146,6 @@ private:
 
 int main(int argc, char** argv) {
 
-	RESTServer app;
+	CMServer app;
 	return app.run(argc, argv);
 }

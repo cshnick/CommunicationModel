@@ -42,22 +42,26 @@ public:
 	~ExistingApiRequestHandlerPrivate() {}
 
 	void handleRequest(HTTPServerRequest& request, HTTPServerResponse& response) {
-		string uri = request.getURI();
-		string method = request.getMethod();
-		for (RMFContainer &rmf : rthMap) {
-			regex rx(rmf.regex);
-			if (regex_match(uri, rx) && rmf.method == method) {
-				if (rmf.fn) {
-					rmf.fn(request, response);
+		try {
+			string uri = request.getURI();
+			string method = request.getMethod();
+			for (RMFContainer &rmf : rthMap) {
+				regex rx(rmf.regex);
+				if (regex_match(uri, rx) && rmf.method == method) {
+					if (rmf.fn) {
+						rmf.fn(request, response);
+					}
 				}
 			}
-		}
 
-		string  json = request["json"];
-		JSON::Parser parser;
-		Dynamic::Var json_obj = parser.parse(json); //Throw error if can't parse
-		response.setStatusAndReason(HTTPResponse::HTTP_OK);
-		response.setContentType("application/json");
+			string  json = request["json"];
+			JSON::Parser parser;
+			Dynamic::Var json_obj = parser.parse(json); //Throw error if can't parse
+			response.setStatusAndReason(HTTPResponse::HTTP_OK);
+			response.setContentType("application/json");
+		} catch (const std::exception e) {
+			Logger::get("main").critical(e.what());
+		}
 	}
 
 	void handleTest(HTTPServerRequest& request, HTTPServerResponse& response) {
