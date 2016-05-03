@@ -3,12 +3,21 @@ set(SAMPLE_NAME "CMServer")
 message("CMAKE_CURRENT_SOURCE_DIR for ${SAMPLE_NAME}: ${CMAKE_CURRENT_SOURCE_DIR}")
 message("EXECUTABLE_OUTPUT_PATH for ${SAMPLE_NAME}: ${EXECUTABLE_OUTPUT_PATH}")
 
-add_custom_target(
-    gen_sql_bindings
-    COMMAND ${EXECUTABLE_OUTPUT_PATH}/litesql-gen -t c++ --output-dir=${CMAKE_CURRENT_SOURCE_DIR}/src
-            ${CMAKE_CURRENT_SOURCE_DIR}/src/NCConsole.xml
-    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/src
-)
+if (MSVC_IDE)
+	add_custom_target(
+			gen_sql_bindings
+			COMMAND ${EXECUTABLE_OUTPUT_PATH}/Debug/litesql-gen.exe -t c++ --output-dir=${CMAKE_CURRENT_SOURCE_DIR}/src
+					${CMAKE_CURRENT_SOURCE_DIR}/src/NCConsole.xml
+			WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/src
+		)
+else (MSVC_IDE)
+	add_custom_target(
+		gen_sql_bindings
+		COMMAND ${EXECUTABLE_OUTPUT_PATH}/litesql-gen -t c++ --output-dir=${CMAKE_CURRENT_SOURCE_DIR}/src
+				${CMAKE_CURRENT_SOURCE_DIR}/src/NCConsole.xml
+		WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/src
+	)
+endif(MSVC_IDE)
 
 set(LOCAL_SRCS "")
 include_directories(
