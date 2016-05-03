@@ -1,2 +1,3 @@
 cmake-poco-build/*
 cmake-communicatioinModel/*
+CommunicatioinModel/build/*
