@@ -45,7 +45,7 @@ set(LITESQL_INCLUDE
     ${CMAKE_CURRENT_SOURCE_DIR}/src/litesql/include
 )
 
-add_definitions (
+add_definitions ( -D_HAS_ITERATOR_DEBUGGING=0
 )
 
 SET (TOP_LEVEL ${CMAKE_CURRENT_SOURCE_DIR})
