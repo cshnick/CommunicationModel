@@ -1,2 +1,3 @@
 add_subdirectory(CMClient)
 add_subdirectory(CMServer)
+add_subdirectory(HTTPSTimeServer)

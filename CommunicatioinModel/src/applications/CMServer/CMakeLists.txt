@@ -1,4 +1,4 @@
-set(SAMPLE_NAME "RESTServer")
+set(SAMPLE_NAME "CMServer")
 
 message("CMAKE_CURRENT_SOURCE_DIR for ${SAMPLE_NAME}: ${CMAKE_CURRENT_SOURCE_DIR}")
 message("EXECUTABLE_OUTPUT_PATH for ${SAMPLE_NAME}: ${EXECUTABLE_OUTPUT_PATH}")
@@ -18,6 +18,14 @@ aux_source_directory(src LOCAL_SRCS)
 
 add_executable( ${SAMPLE_NAME} ${LOCAL_SRCS} )
 set_property(TARGET ${SAMPLE_NAME} PROPERTY CXX_STANDARD 11)
-target_link_libraries( ${SAMPLE_NAME} PocoNet PocoUtil PocoJSON PocoXML PocoFoundation ${litesql-target})
+target_link_libraries( ${SAMPLE_NAME} PocoNet PocoNetSSL PocoUtil PocoJSON PocoXML PocoFoundation ${litesql-target})
 
-add_dependencies(${SAMPLE_NAME} gen_sql_bindings)
+add_custom_target(
+    copy_${SAMPLE_NAME}
+    COMMAND cmake -E copy_if_different ${CMAKE_CURRENT_SOURCE_DIR}/any.pem ${EXECUTABLE_OUTPUT_PATH}
+    COMMAND cmake -E copy_if_different ${CMAKE_CURRENT_SOURCE_DIR}/rootcert.pem ${EXECUTABLE_OUTPUT_PATH}
+    COMMAND cmake -E copy_if_different ${CMAKE_CURRENT_SOURCE_DIR}/${SAMPLE_NAME}.properties ${EXECUTABLE_OUTPUT_PATH}
+    COMMENT "Copying ${SAMPLE_NAME} resources"
+)
+
+add_dependencies(${SAMPLE_NAME} gen_sql_bindings copy_${SAMPLE_NAME})

@@ -21,12 +21,18 @@
 	<object name="Profile">
 		<field name="uniquename" type="string" unique="true"></field>
 		<field name="name" type="string"></field>
+		<field name="idScreenResolution" type="integer"></field>
 	</object>
 
 	<object name="Subnet">
 		<field name="uniquename" type="string" unique="true"></field>
 		<field name="name" type="string"></field>
 	</object>
+
+	<!--  <object name="ScreenResolution">
+		<field name="hResolution;" type="integer"></field>
+		<field name="vResolution;" type="integer"></field>
+	</object>  -->
 
 	<!-- Relations -->
 	<relation id="DevGroup">
@@ -38,7 +44,7 @@
 		<relate object="Device" limit="one" handle="subnet" />
 		<relate object="Subnet" limit="one" handle="device" />
 	</relation>
-
+	
 	<!--   <relation id="DevProfile">
 		<relate object="Device" limit="one" handle="profile" />
 		<relate object="Profile" limit="one" handle="device" />

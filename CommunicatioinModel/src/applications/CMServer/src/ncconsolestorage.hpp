@@ -221,6 +221,8 @@ public:
     litesql::Field<std::string> uniquename;
     static const litesql::FieldType Name;
     litesql::Field<std::string> name;
+    static const litesql::FieldType IdScreenResolution;
+    litesql::Field<int> idScreenResolution;
     static void initValues();
 protected:
     void defaults();
