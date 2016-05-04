@@ -1,0 +1,73 @@
+[
+  {
+    "type": "response",
+    "path": "/groups",
+    "method": "get",
+    "params": {
+      "id": 2,
+      "name": "group1"
+    },
+    "return": {
+      "status": "ok",
+      "reason": "",
+      "value": [
+        {
+          "name": "group1",
+          "id": 1,
+          "uniquename": "group1"
+        },
+        {
+          "name": "group2",
+          "id": 1,
+          "uniquename": "group2"
+        },
+        {
+          "name": "group3",
+          "id": 1,
+          "uniquename": "group3"
+        }
+      ]
+    }
+  },
+  {
+    "type": "response",
+    "path": "/groups",
+    "method": "rename",
+    "params": {
+      "id": 2,
+      "name": "group1",
+      "newname": "group2"
+    },
+    "return": {
+      "status": "ok",
+      "reason": ""
+    }
+  },
+  {
+    "type": "response",
+    "path": "/groups",
+    "method": "rename",
+    "params": {
+      "id": 2,
+      "name": "group1",
+      "newname": "group2"
+    },
+    "return": {
+      "status": "ok",
+      "reason": ""
+    }
+  },
+  {
+    "type": "response",
+    "path": "/groups",
+    "method": "delete",
+    "params": {
+      "id": 2,
+      "name": "group1"
+    },
+    "return": {
+      "status": "ok",
+      "reason": ""
+    }
+  }
+]
