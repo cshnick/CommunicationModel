@@ -35,6 +35,7 @@
 #include "Poco/PatternFormatter.h"
 #include "Poco/FormattingChannel.h"
 #include "Poco/Util/Application.h"
+#include "Poco/JSON/Object.h"
 #include <iostream>
 #include <sstream>
 
@@ -45,6 +46,8 @@
 using namespace std;
 using namespace Poco;
 using namespace Poco::Net;
+using namespace Poco::Dynamic;
+using namespace Poco::JSON;
 
 mutex s_mutex;
 constexpr const char* protocol  = "https";
@@ -54,7 +57,7 @@ constexpr const int defaultport = 9443;
 using RMJContainer = struct {
 	string resource;
 	string method;
-	string json;
+	Poco::JSON::Object json;
 };
 using RegexToHandlerVec = vector<RMJContainer>;
 
@@ -94,13 +97,17 @@ public:
 
 class CMClient: public Poco::Util::Application {
 public:
-	CMClient() {
-	}
+	template<typename T>
+	using DynMap = std::map<T, Var>;
+	using ResponseCallback = std::function<void(HTTPResponse&)>;
+
+	CMClient() {}
 
 protected:
 	void initialize(Application& self) {
 		loadConfiguration(); // load default configuration files, if present
 		Application::initialize(self);
+		createUriPrefix();
 	}
 
 	void uninitialize() {
@@ -119,48 +126,39 @@ protected:
 		cout << "" << "Help" << endl;
 	}
 
-	bool doRequest(const RMJContainer &rmj) {
-		lock_guard<mutex> guard(mutex);
+	void addGroup(const string &groupname) {
+		string resource = "/groups";
+		string method = HTTPRequest::HTTP_POST;
 
-		URI uri(m_uriprefix + rmj.resource);
-		Application::logger().information("doRequest for: %s", uri.toString());
+		Poco::JSON::Object obj;
+		obj.set("type", "request");
+		obj.set("path", ",groups");
+		obj.set("method", "add");
+		obj.set("params", Struct<string>(DynMap<string>{
+			{"name", groupname}
+		}));
 
-		std::string username;
-		std::string password;
-		Poco::Net::HTTPCredentials::extractCredentials(uri, username, password);
-		Poco::Net::HTTPCredentials credentials(username, password);
-
-		HTTPSClientSession session(uri.getHost(), uri.getPort());
-		Application::logger().information("Connection is secure: %s", std::string(session.secure() ? "true" : "false"));
-
-		HTTPRequest request(rmj.method, rmj.resource, HTTPMessage::HTTP_1_1);
-
-		request.add("json", rmj.json);
-		stringstream reqss;
-		request.write(reqss);
-		Application::logger().information("Request: %s", reqss.str());
-
-		HTTPResponse response;
-
-		ostream &ostr = session.sendRequest(request);
-		std::istream& rs = session.receiveResponse(response);
-		std::cout << response.getStatus() << " " << response.getReason() << std::endl;
-
-		if (response.getStatus() != Poco::Net::HTTPResponse::HTTP_UNAUTHORIZED) {
-			StreamCopier::copyStream(rs, std::cout);
-			return true;
-		} else {
-			Poco::NullOutputStream null;
-			string buffer;
-			StreamCopier::copyToString(rs, buffer);
-			return false;
-		}
-		return false;
+		RMJContainer c {resource, method, obj};
+		sendData(c, [this] (const HTTPResponse &response) {
+			Application::logger().information("Response callback not implemented");
+		});
 	}
 
-	void addGroup(const string &groupname) {
+	void sendData(const RMJContainer &data, ResponseCallback callback) {
 		lock_guard<mutex> guard(mutex);
 
+		URI uri(m_uriprefix + data.resource);
+		HTTPSClientSession session(uri.getHost(), uri.getPort());
+
+		HTTPRequest request(data.method, data.resource, HTTPMessage::HTTP_1_1);
+
+		stringstream ss; data.json.stringify(ss);
+		request.add("json", ss.str());
+
+		HTTPResponse response;
+		ostream &ostr = session.sendRequest(request);
+		std::istream& rs = session.receiveResponse(response);
+		callback(response);
 	}
 
 	int main(const vector<string> &args) {
@@ -177,9 +175,8 @@ protected:
 			Application::logger().setChannel(formattingChannel);
 
 			SSLInitializer raii_ssl;
-			RMJContainer postcreds {"/echo", HTTPRequest::HTTP_GET, "{\"username\": \"test\"}"};
 
-			doRequest(postcreds);
+			addGroup("Group1");
 
 		} catch (const exception &e) {
 			Application::logger().critical(e.what());
