@@ -38,8 +38,17 @@ if(CMAKE_BUILD_TYPE MATCHES Debug)
     endif (MSVC)
 endif (CMAKE_BUILD_TYPE MATCHES Debug)
 
-set(litesql-target litesql)
-set(poco-target poco)
+set(litesql litesql)
+set(PocoNet PocoNet)
+set(PocoUtil PocoUtil)
+set(PocoJSON PocoJSON)
+set(PocoXML PocoXML)
+set(PocoFoundation PocoFoundation)
+if (MSVC_IDE)
+    set(PocoNetSSL PocoNetSSLWin)
+else (MSVC_IDE)
+    set(PocoNetSSL PocoNetSSL)
+endif (MSVC_IDE)
 
 set(LITESQL_INCLUDE
     ${CMAKE_CURRENT_SOURCE_DIR}/src/litesql/include
