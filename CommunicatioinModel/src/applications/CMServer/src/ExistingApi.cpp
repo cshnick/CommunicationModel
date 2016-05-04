@@ -14,6 +14,7 @@
 #include "Poco/URI.h"
 #include "Poco/Logger.h"
 #include "Poco/JSON/Parser.h"
+#include "Poco/JSON/Stringifier.h"
 #include "Poco/Net/HTTPServerResponse.h"
 
 #include "ncconsolestorage.hpp"
@@ -45,6 +46,8 @@ public:
 		try {
 			string uri = request.getURI();
 			string method = request.getMethod();
+
+			Logger::get("main").information("Requested from %s, method %s", uri, method);
 			for (RMFContainer &rmf : rthMap) {
 				regex rx(rmf.regex);
 				if (regex_match(uri, rx) && rmf.method == method) {
@@ -54,12 +57,9 @@ public:
 				}
 			}
 
-			string  json = request["json"];
-			JSON::Parser parser;
-			Dynamic::Var json_obj = parser.parse(json); //Throw error if can't parse
 			response.setStatusAndReason(HTTPResponse::HTTP_OK);
 			response.setContentType("application/json");
-		} catch (const std::exception e) {
+		} catch (const std::exception &e) {
 			Logger::get("main").critical(e.what());
 		}
 	}
@@ -177,6 +177,29 @@ RegexToHandlerVec ExistingApiRequestHandlerPrivate::rthMap  = {
 	},
 
 //	{"", HTTPRequest::HTTP_GET, &ExistingApiRequestHandlerPrivate::handleTest},
+
+	{".*/echo", HTTPRequest::HTTP_GET, [] (HTTPServerRequest& request, HTTPServerResponse& response) {
+		using namespace Poco::JSON;
+		using namespace Poco::Dynamic;
+
+		try {
+			Var json_var = Parser().parse(request.get("json", "{}"));
+			Object::Ptr root = json_var.extract<Object::Ptr>();
+			auto username = root->getValue<string>("username");
+			Logger::get("main").information("Username (template method): %s", username);
+			DynamicStruct root_obj = *root;
+			string username_easy = root_obj["username"];
+			Logger::get("main").information("Username (easy way): %s", username_easy);
+
+			stringstream ss;
+			Stringifier::stringify(json_var, ss);
+			Logger::get("main").information("Stringified: %s", ss.str());
+			Stringifier::stringify(json_var, response.send());
+		} catch (std::exception &e) {
+			response.send() << "{\"Error\", \" Invalid json argument\"}" << endl;
+		}
+	}
+	},
 
 	{"theex", "GET",  nullptr}
 };

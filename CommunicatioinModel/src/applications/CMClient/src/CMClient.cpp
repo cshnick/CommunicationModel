@@ -141,7 +141,7 @@ protected:
 		request.add("json", rmj.json);
 		stringstream reqss;
 		request.write(reqss);
-		Application::logger().information("Request: %s", reqss.str().c_str());
+		Application::logger().information("Request: %s", reqss.str());
 
 		HTTPResponse response;
 
@@ -175,7 +175,7 @@ protected:
 			Application::logger().setChannel(formattingChannel);
 
 			SSLInitializer raii_ssl;
-			RMJContainer postcreds {"/postcreds", HTTPRequest::HTTP_POST, "{\"username\": \"test\"}"};
+			RMJContainer postcreds {"/echo", HTTPRequest::HTTP_GET, "{\"username\": \"test\"}"};
 
 			doRequest(postcreds);
 
