@@ -126,16 +126,88 @@ protected:
 		cout << "" << "Help" << endl;
 	}
 
+	void getGroups() {
+		string resource = "/groups";
+		string method = HTTPRequest::HTTP_GET;
+
+		Poco::JSON::Object obj;
+		obj.set("type", "request");
+		obj.set("path", ",groups");
+		obj.set("method", "get");
+		obj.set("params", Struct<string>());
+
+		RMJContainer c {resource, method, obj};
+		sendData(c, [this] (const HTTPResponse &response) {
+			Application::logger().information("Response callback not implemented");
+		});
+	}
+
+	void getGroup(int groupId) {
+		string resource = "/groups";
+		string method = HTTPRequest::HTTP_GET;
+
+		Poco::JSON::Object obj;
+		obj.set("type", "request");
+		obj.set("path", ",groups");
+		obj.set("method", "get");
+		obj.set("params", Struct<string>(DynMap<string>{
+			{"id", groupId}
+		}));
+
+		RMJContainer c {resource, method, obj};
+		sendData(c, [this] (const HTTPResponse &response) {
+			Application::logger().information("Response callback not implemented");
+		});
+	}
+
 	void addGroup(const string &groupname) {
 		string resource = "/groups";
 		string method = HTTPRequest::HTTP_POST;
 
 		Poco::JSON::Object obj;
 		obj.set("type", "request");
-		obj.set("path", ",groups");
+		obj.set("path", ",/groups");
 		obj.set("method", "add");
 		obj.set("params", Struct<string>(DynMap<string>{
 			{"name", groupname}
+		}));
+
+		RMJContainer c {resource, method, obj};
+		sendData(c, [this] (const HTTPResponse &response) {
+			Application::logger().information("Response callback not implemented");
+		});
+	}
+
+	void renameGroup(int groupId, const string &newname) {
+		string resource = "/groups";
+		string method = HTTPRequest::HTTP_POST;
+
+		Poco::JSON::Object obj;
+		obj.set("type", "request");
+		obj.set("path", ",/groups");
+		obj.set("method", "rename");
+		obj.set("params", Struct<string>(DynMap<string>{
+			{"id", groupId},
+			{"newname", newname}
+		}));
+
+		RMJContainer c {resource, method, obj};
+		sendData(c, [this] (const HTTPResponse &response) {
+			Application::logger().information("Response callback not implemented");
+		});
+	}
+
+
+	void deleteGroup(int groupId) {
+		string resource = "/groups";
+		string method = HTTPRequest::HTTP_POST;
+
+		Poco::JSON::Object obj;
+		obj.set("type", "request");
+		obj.set("path", ",/groups");
+		obj.set("method", "delete");
+		obj.set("params", Struct<string>(DynMap<string>{
+			{"id", groupId},
 		}));
 
 		RMJContainer c {resource, method, obj};
@@ -177,6 +249,10 @@ protected:
 			SSLInitializer raii_ssl;
 
 			addGroup("Group1");
+			renameGroup(0, "Group2");
+			getGroups();
+			getGroup(0);
+			deleteGroup(0);
 
 		} catch (const exception &e) {
 			Application::logger().critical(e.what());

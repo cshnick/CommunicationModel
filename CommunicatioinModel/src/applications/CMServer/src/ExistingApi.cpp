@@ -221,6 +221,26 @@ RegexToHandlerVec ExistingApiRequestHandlerPrivate::rthMap  = {
 	}
 	},
 
+	{".*/groups", HTTPRequest::HTTP_GET, [] (HTTPServerRequest& request, HTTPServerResponse& response) {
+		using namespace Poco::JSON;
+		using namespace Poco::Dynamic;
+
+		try {
+			Var json_var = Parser().parse(request.get("json", "{}"));
+			DynamicStruct root_obj = *(json_var.extract<Object::Ptr>());
+			string method = root_obj["method"];
+			Logger::get("main").information("Requested fundtion: %s", method);
+
+			stringstream ss;
+			Stringifier::stringify(json_var, ss);
+			Logger::get("main").information("Stringified json: %s", ss.str());
+			Stringifier::stringify(json_var, response.send());
+		} catch (std::exception &e) {
+			response.send() << "{\"Error\", \" Invalid json argument\"}" << endl;
+		}
+	}
+	},
+
 	{"theex", "GET",  nullptr}
 };
 
