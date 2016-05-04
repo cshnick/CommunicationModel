@@ -121,11 +121,8 @@ protected:
 
 	bool doRequest(const RMJContainer &rmj) {
 		lock_guard<mutex> guard(mutex);
-		stringstream ss;
-		ss << protocol << "://" << localhost << ":" << defaultport;
-		string prefix = ss.str();
-		URI uri(prefix + rmj.resource);
 
+		URI uri(m_uriprefix + rmj.resource);
 		Application::logger().information("doRequest for: %s", uri.toString());
 
 		std::string username;
@@ -161,6 +158,11 @@ protected:
 		return false;
 	}
 
+	void addGroup(const string &groupname) {
+		lock_guard<mutex> guard(mutex);
+
+	}
+
 	int main(const vector<string> &args) {
 		try {
 			Poco::AutoPtr<SplitterChannel> splitterch(new SplitterChannel());
@@ -186,6 +188,20 @@ protected:
 
 		return Application::EXIT_OK;
 	}
+
+private:
+	void createUriPrefix() {
+		string protocol = config().getString("CMClient.protocol", "https");
+		string host = config().getString("CMClient.host", "localhost");
+		unsigned short port = (unsigned short) config().getInt("CMClient.port", 9443);
+
+		stringstream ss;
+		ss << protocol << "://" << host << ":" << port;
+		m_uriprefix = ss.str();
+	}
+
+private:
+	string m_uriprefix;
 };
 
 POCO_APP_MAIN(CMClient)
