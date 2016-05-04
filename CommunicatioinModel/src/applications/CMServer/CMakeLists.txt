@@ -27,7 +27,11 @@ aux_source_directory(src LOCAL_SRCS)
 
 add_executable( ${SAMPLE_NAME} ${LOCAL_SRCS} )
 set_property(TARGET ${SAMPLE_NAME} PROPERTY CXX_STANDARD 11)
-target_link_libraries( ${SAMPLE_NAME} PocoNet PocoNetSSL PocoUtil PocoJSON PocoXML PocoFoundation ${litesql-target})
+if (MSVC_IDE)
+	target_link_libraries( ${SAMPLE_NAME} PocoNet PocoNetSSLWin PocoUtil PocoJSON PocoXML PocoFoundation ${litesql-target})
+else (MSVC_IDE)
+	target_link_libraries( ${SAMPLE_NAME} PocoNet PocoNetSSL PocoUtil PocoJSON PocoXML PocoFoundation ${litesql-target})
+endif(MSVC_IDE)
 
 add_custom_target(
     copy_${SAMPLE_NAME}
