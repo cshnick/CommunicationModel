@@ -72,6 +72,9 @@ using Poco::FormattingChannel;
 using Poco::PatternFormatter;
 using Poco::Logger;
 
+template<typename T = std::string>
+using DynMap = std::map<T, Poco::Dynamic::Var>;
+
 class CMServer: public Poco::Util::ServerApplication {
 public:
 	CMServer()

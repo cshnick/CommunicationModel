@@ -35,7 +35,7 @@ string Persistent::insert(Record& tables,
 void Persistent::update(const Updates& updates) {
     for (Updates::const_iterator i = updates.begin(); i != updates.end(); i++) {
         UpdateQuery uq(i->first);
-        uq.where(RawExpr("id_ = '" + toString(oldKey) + "'"));
+        uq.where(RawExpr("id = '" + toString(oldKey) + "'"));
         bool notEmpty = false;
         for (vector<pair<FieldType, string> >::const_iterator i2 =
                 i->second.begin(); i2 != i->second.end();
@@ -53,7 +53,7 @@ void Persistent::prepareUpdate(Updates& updates, const string& table) {
     }
 }
 void Persistent::deleteFromTable(const string& table, const string& id) {
-    db->query("DELETE FROM " + table + " WHERE id_="+escapeSQL(id));
+    db->query("DELETE FROM " + table + " WHERE id="+escapeSQL(id));
 }
 }
 

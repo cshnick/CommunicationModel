@@ -36,6 +36,7 @@
 #include "Poco/FormattingChannel.h"
 #include "Poco/Util/Application.h"
 #include "Poco/JSON/Object.h"
+#include "Poco/JSON/Parser.h"
 #include <iostream>
 #include <sstream>
 
@@ -97,9 +98,9 @@ public:
 
 class CMClient: public Poco::Util::Application {
 public:
-	template<typename T>
+	template<typename T = string>
 	using DynMap = std::map<T, Var>;
-	using ResponseCallback = std::function<void(HTTPResponse&)>;
+	using ResponseCallback = std::function<void(HTTPResponse&, istream&)>;
 
 	CMClient() {}
 
@@ -137,7 +138,7 @@ protected:
 		obj.set("params", Struct<string>());
 
 		RMJContainer c {resource, method, obj};
-		sendData(c, [this] (const HTTPResponse &response) {
+		sendData(c, [this] (const HTTPResponse &response, istream &) {
 			Application::logger().information("Response callback not implemented");
 		});
 	}
@@ -155,45 +156,57 @@ protected:
 		}));
 
 		RMJContainer c {resource, method, obj};
-		sendData(c, [this] (const HTTPResponse &response) {
+		sendData(c, [this] (const HTTPResponse &response, istream &) {
 			Application::logger().information("Response callback not implemented");
 		});
 	}
 
-	void addGroup(const string &groupname) {
+	int addGroup(const string &groupname) {
 		string resource = "/groups";
 		string method = HTTPRequest::HTTP_POST;
+		int id = -1;
 
-		Poco::JSON::Object obj;
+		Poco::JSON::Object obj, params;
 		obj.set("type", "request");
 		obj.set("path", ",/groups");
 		obj.set("method", "add");
-		obj.set("params", Struct<string>(DynMap<string>{
-			{"name", groupname}
-		}));
+			params.set("name", groupname);
+		obj.set("params", params);
 
 		RMJContainer c {resource, method, obj};
-		sendData(c, [this] (const HTTPResponse &response) {
-			Application::logger().information("Response callback not implemented");
+		sendData(c, [this, &id] (const HTTPResponse &response, istream &istr) {
+			stringstream ss; response.write(ss);
+			Application::logger().information("Response: %s", trim(ss.str()));
+			ss.str(""); ss.clear(); StreamCopier::copyStream(istr, ss);
+			Application::logger().information("Response body: %s", trim(ss.str()));
+			DynamicStruct root_obj = *(Parser().parse(ss.str()).extract<Object::Ptr>());
+			if (root_obj["return"]["status"] == "ok") {
+				id = root_obj["return"]["value"];
+			}
 		});
+
+		printf("");
+		return id;
 	}
 
 	void renameGroup(int groupId, const string &newname) {
 		string resource = "/groups";
 		string method = HTTPRequest::HTTP_POST;
 
-		Poco::JSON::Object obj;
+		Poco::JSON::Object obj, params;
 		obj.set("type", "request");
 		obj.set("path", ",/groups");
 		obj.set("method", "rename");
-		obj.set("params", Struct<string>(DynMap<string>{
-			{"id", groupId},
-			{"newname", newname}
-		}));
+			params.set("id", groupId);
+			params.set("newname", newname);
+		obj.set("params", params);
 
 		RMJContainer c {resource, method, obj};
-		sendData(c, [this] (const HTTPResponse &response) {
-			Application::logger().information("Response callback not implemented");
+		sendData(c, [this] (const HTTPResponse &response, istream &istr) {
+			stringstream ss; response.write(ss);
+			Application::logger().information("Response: %s", trim(ss.str()));
+			ss.str(""); ss.clear(); StreamCopier::copyStream(istr, ss);
+			Application::logger().information("Response body: %s", trim(ss.str()));
 		});
 	}
 
@@ -202,17 +215,19 @@ protected:
 		string resource = "/groups";
 		string method = HTTPRequest::HTTP_POST;
 
-		Poco::JSON::Object obj;
+		Poco::JSON::Object obj, params;
 		obj.set("type", "request");
 		obj.set("path", ",/groups");
 		obj.set("method", "delete");
-		obj.set("params", Struct<string>(DynMap<string>{
-			{"id", groupId},
-		}));
+			params.set("id", groupId);
+		obj.set("params", params);
 
 		RMJContainer c {resource, method, obj};
-		sendData(c, [this] (const HTTPResponse &response) {
-			Application::logger().information("Response callback not implemented");
+		sendData(c, [this] (const HTTPResponse &response, istream &istr) {
+			stringstream ss; response.write(ss);
+			Application::logger().information("Response: %s", trim(ss.str()));
+			ss.str(""); ss.clear(); StreamCopier::copyStream(istr, ss);
+			Application::logger().information("Response body: %s", trim(ss.str()));
 		});
 	}
 
@@ -230,7 +245,7 @@ protected:
 		HTTPResponse response;
 		ostream &ostr = session.sendRequest(request);
 		std::istream& rs = session.receiveResponse(response);
-		callback(response);
+		callback(response, rs);
 	}
 
 	int main(const vector<string> &args) {
@@ -248,11 +263,17 @@ protected:
 
 			SSLInitializer raii_ssl;
 
-			addGroup("Group1");
-			renameGroup(0, "Group2");
-			getGroups();
-			getGroup(0);
-			deleteGroup(0);
+			string groupname = "Group0";
+			string grouprename = "Group100";
+			int id = addGroup(groupname);
+			if (id == -1) {
+				Application::logger().information("Can't add group: %s", groupname);
+				return Application::EXIT_OK;
+			}
+			renameGroup(id, grouprename);
+//			getGroups();
+//			getGroup(0);
+			deleteGroup(id);
 
 		} catch (const exception &e) {
 			Application::logger().critical(e.what());
@@ -271,6 +292,11 @@ private:
 		stringstream ss;
 		ss << protocol << "://" << host << ":" << port;
 		m_uriprefix = ss.str();
+	}
+	string trim(const string& str) {
+	    size_t first = str.find_first_not_of('\n');
+	    size_t last = str.find_last_not_of('\n');
+	    return str.substr(first, (last-first + 1));
 	}
 
 private:

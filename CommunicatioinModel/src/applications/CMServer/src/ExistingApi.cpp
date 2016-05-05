@@ -34,6 +34,8 @@ using RMFContainer = struct {
 	RequestSourceHandlerFunc fn;
 };
 using RegexToHandlerVec = vector<RMFContainer>;
+template<typename T = string>
+using DynMap = std::map<T, Poco::Dynamic::Var>;
 
 class ExistingApiRequestHandlerPrivate {
 	friend class ExistingApiRequestHandler;
@@ -204,18 +206,85 @@ RegexToHandlerVec ExistingApiRequestHandlerPrivate::rthMap  = {
 	{".*/groups", HTTPRequest::HTTP_POST, [] (HTTPServerRequest& request, HTTPServerResponse& response) {
 		using namespace Poco::JSON;
 		using namespace Poco::Dynamic;
+		using namespace litesql;
+		using namespace ncconsole;
 
 		try {
-			Var json_var = Parser().parse(request.get("json", "{}"));
-			DynamicStruct root_obj = *(json_var.extract<Object::Ptr>());
-			string method = root_obj["method"];
-			Logger::get("main").information("Requested fundtion: %s", method);
+			Object::Ptr root_obj = Parser().parse(request.get("json", "{}")).extract<Object::Ptr>();
+			DynamicStruct root_struct = *root_obj;
+			string method = root_struct["method"];
+			Logger::get("main").information("Requested function: %s", method);
 
-			stringstream ss;
-			Stringifier::stringify(json_var, ss);
-			Logger::get("main").information("Stringified json: %s", ss.str());
-			Stringifier::stringify(json_var, response.send());
+			NCConsoleStorage db("sqlite3", "database=nconsole.db");
+			db.verbose = true;
+			if (db.needsUpgrade()) db.upgrade();
+
+			Object returnobj;
+			if (method == "add") {
+				string groupname = root_struct["params"]["name"];
+
+				bool exists = select<DeviceGroup>(db, DeviceGroup::Uniquename == groupname).count();
+				if (!exists) {
+					DeviceGroup gr(db);
+					gr.uniquename = groupname;
+					gr.name = groupname;
+					gr.update();
+					returnobj.set("status", "ok");
+					returnobj.set("reason", "");
+					returnobj.set("value", (int)gr.id);
+				} else {
+					returnobj.set("status", "Rejected");
+					returnobj.set("reason", "Db exists");
+					returnobj.set("value", 0);
+				}
+			} else if (method == "rename") {
+				int id = root_struct["params"]["id"];
+				bool exists = select<DeviceGroup>(db, DeviceGroup::Id == id).count();
+				if (exists) {
+					string newname = root_struct["params"]["newname"];
+					bool newexists = select<DeviceGroup>(db, DeviceGroup::Name == newname).count();
+					if (!newexists) {
+						DeviceGroup gr = select<DeviceGroup>(db, DeviceGroup::Id == id).one();
+						gr.uniquename = newname;
+						gr.name = newname;
+						gr.update();
+						returnobj.set("status", "Ok");
+						returnobj.set("reason", "");
+						returnobj.set("value", "");
+					} else {
+						returnobj.set("status", "Rejected");
+						returnobj.set("reason", "Db newname exists");
+						returnobj.set("value", "");
+					}
+				} else {
+					returnobj.set("status", "Rejected");
+					returnobj.set("reason", "Db missed");
+					returnobj.set("value", "");
+				}
+			} else if (method == "delete") {
+				int id = root_struct["params"]["id"];
+				bool exists = select<DeviceGroup>(db, DeviceGroup::Id == id).count();
+				if (exists) {
+					DeviceGroup gr = select<DeviceGroup>(db, DeviceGroup::Id == id).one();
+					gr.del();
+					gr.update();
+					returnobj.set("status", "Ok");
+					returnobj.set("reason", "");
+					returnobj.set("value", "");
+				} else {
+					returnobj.set("status", "Rejected");
+					returnobj.set("reason", "Db missed");
+					returnobj.set("value", "");
+				}
+			}
+
+			root_obj->set("return", returnobj);
+			root_obj->stringify(response.send());
+
+			stringstream ss; request.write(ss);
+			Logger::get("main").information("Incoming request: %s", ss.str());
 		} catch (std::exception &e) {
+			Logger::get("main").critical("Exception: %s", string(e.what()));
 			response.send() << "{\"Error\", \" Invalid json argument\"}" << endl;
 		}
 	}
@@ -224,12 +293,23 @@ RegexToHandlerVec ExistingApiRequestHandlerPrivate::rthMap  = {
 	{".*/groups", HTTPRequest::HTTP_GET, [] (HTTPServerRequest& request, HTTPServerResponse& response) {
 		using namespace Poco::JSON;
 		using namespace Poco::Dynamic;
+		using namespace litesql;
+		using namespace ncconsole;
 
 		try {
 			Var json_var = Parser().parse(request.get("json", "{}"));
 			DynamicStruct root_obj = *(json_var.extract<Object::Ptr>());
 			string method = root_obj["method"];
-			Logger::get("main").information("Requested fundtion: %s", method);
+
+			NCConsoleStorage db("sqlite3", "database=nconsole.db");
+			if (db.needsUpgrade()) db.upgrade();
+
+			Logger::get("main").information("Requested function: %s", method);
+			if (method == "get") {
+
+			} else if (method == "add") {
+
+			};
 
 			stringstream ss;
 			Stringifier::stringify(json_var, ss);
