@@ -133,13 +133,16 @@ protected:
 
 		Poco::JSON::Object obj;
 		obj.set("type", "request");
-		obj.set("path", ",groups");
+		obj.set("path", ",/groups");
 		obj.set("method", "get");
-		obj.set("params", Struct<string>());
+		obj.set("params", "");
 
 		RMJContainer c {resource, method, obj};
-		sendData(c, [this] (const HTTPResponse &response, istream &) {
-			Application::logger().information("Response callback not implemented");
+		sendData(c, [this] (const HTTPResponse &response, istream &istr) {
+			stringstream ss; response.write(ss);
+			Application::logger().information("Response: %s", trim(ss.str()));
+			ss.str(""); ss.clear(); StreamCopier::copyStream(istr, ss);
+			Application::logger().information("Response body: %s", trim(ss.str()));
 		});
 	}
 
@@ -156,8 +159,11 @@ protected:
 		}));
 
 		RMJContainer c {resource, method, obj};
-		sendData(c, [this] (const HTTPResponse &response, istream &) {
-			Application::logger().information("Response callback not implemented");
+		sendData(c, [this] (const HTTPResponse &response, istream &istr) {
+			stringstream ss; response.write(ss);
+			Application::logger().information("Response: %s", trim(ss.str()));
+			ss.str(""); ss.clear(); StreamCopier::copyStream(istr, ss);
+			Application::logger().information("Response body: %s", trim(ss.str()));
 		});
 	}
 
@@ -271,7 +277,7 @@ protected:
 				return Application::EXIT_OK;
 			}
 			renameGroup(id, grouprename);
-//			getGroups();
+			getGroups();
 //			getGroup(0);
 			deleteGroup(id);
 

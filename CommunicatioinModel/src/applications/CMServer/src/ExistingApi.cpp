@@ -297,25 +297,66 @@ RegexToHandlerVec ExistingApiRequestHandlerPrivate::rthMap  = {
 		using namespace ncconsole;
 
 		try {
-			Var json_var = Parser().parse(request.get("json", "{}"));
-			DynamicStruct root_obj = *(json_var.extract<Object::Ptr>());
-			string method = root_obj["method"];
+			Object::Ptr root_obj = Parser().parse(request.get("json", "{}")).extract<Object::Ptr>();
+			DynamicStruct root_struct = *root_obj;
+			string method = root_struct["method"];
+			Logger::get("main").information("Requested function: %s", method);
 
 			NCConsoleStorage db("sqlite3", "database=nconsole.db");
+			db.verbose = true;
 			if (db.needsUpgrade()) db.upgrade();
 
-			Logger::get("main").information("Requested function: %s", method);
-			if (method == "get") {
+			auto convertGroup = [] (const DeviceGroup &gr) {
+				Object groupObject;
+				groupObject.set(gr.id.name(), (int)gr.id);
+				groupObject.set(gr.uniquename.name(), (string)gr.uniquename);
+				groupObject.set(gr.name.name(), (string)gr.name);
 
-			} else if (method == "add") {
-
+				return groupObject;
 			};
 
-			stringstream ss;
-			Stringifier::stringify(json_var, ss);
-			Logger::get("main").information("Stringified json: %s", ss.str());
-			Stringifier::stringify(json_var, response.send());
+			Object returnobj;
+			if (method == "get") {
+				if (root_struct["params"].isString()) { //Empty params
+					auto ds = select<DeviceGroup>(db);
+					if (ds.count()) {
+						auto groups = ds.all();
+						JSON::Array arr;
+						for (const DeviceGroup &gr: groups) {
+							arr.add(convertGroup(gr));
+						}
+						returnobj.set("status", "Ok");
+						returnobj.set("reason", "");
+						returnobj.set("value", arr);
+					} else {
+						returnobj.set("status", "Rejected");
+						returnobj.set("reason", "Db missing");
+						returnobj.set("value", "");
+					}
+				} else {
+					int id = root_struct["params"]["id"];
+					auto ds = select<DeviceGroup>(db, DeviceGroup::Id == id);
+					if (ds.count()) {
+						DeviceGroup gr = ds.one();
+						Object retvalue = convertGroup(gr);
+						returnobj.set("status", "Ok");
+						returnobj.set("reason", "");
+						returnobj.set("value", retvalue);
+					} else {
+						returnobj.set("status", "Rejected");
+						returnobj.set("reason", "Db missing");
+						returnobj.set("value", "");
+					}
+				}
+			}
+
+			root_obj->set("return", returnobj);
+			root_obj->stringify(response.send());
+
+			stringstream ss; request.write(ss);
+			Logger::get("main").information("Incoming request: %s", ss.str());
 		} catch (std::exception &e) {
+			Logger::get("main").critical("Exception: %s", string(e.what()));
 			response.send() << "{\"Error\", \" Invalid json argument\"}" << endl;
 		}
 	}
